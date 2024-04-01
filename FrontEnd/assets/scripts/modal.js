@@ -50,3 +50,4 @@ overlay.addEventListener('click', () => {
     overlay.style.display = 'none';
     modalContainer.style.display = 'none';
 });
+
