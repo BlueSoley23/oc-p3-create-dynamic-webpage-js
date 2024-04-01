@@ -21,52 +21,52 @@
 /* ######################################### Définition du design system ############################################# */
 /* ################################################################################################################### */
 
-	:root {
+:root {
 
-		/* Couleurs */
-		--background-color: #FFFEF8;
-		--main-color: #B1663C;
-		--secondary-color: #1D6154;
-		--text-color: #3D3D3D;
-		--link-color: #000000;
-		--selected-button-background: #1D6154;
-		--selected-button-color: white;
-		--button-border-color: #1D6154;
-		--button-background-color: white;
-		--button-color: #1D6154;
-		--submit-button-background-color: #1D6154;
-		--submit-button-color: #FFFFFF;
+/* Couleurs */
+	--background-color: #FFFEF8;
+	--main-color: #B1663C;
+	--secondary-color: #1D6154;
+	--text-color: #3D3D3D;
+	--link-color: #000000;
+	--selected-button-background: #1D6154;
+	--selected-button-color: white;
+	--button-border-color: #1D6154;
+	--button-background-color: white;
+	--button-color: #1D6154;
+	--submit-button-background-color: #1D6154;
+	--submit-button-color: #FFFFFF;
 
 
 
-		/* Tailles de police (bases de l'unité em, utilisée pour définir les dimensions et les marges / dimensions
+	/* Tailles de police (bases de l'unité em, utilisée pour définir les dimensions et les marges / dimensions
 		   conforme à la maquette Figma); toutes les dimensions des pages peuvent être modifiées en agissant uniquement-
 		   sur ces valeurs (affichage modulable & dynamique) */
-		--main-font-size: 14px;
-		--h1-font-size: 22px;
-		--h2-font-size: 30px;
-		--nav-font-size: 16px;
-		--category-button-font-size: 16px;
-		--submit-button-font-size: 14px;
+	--main-font-size: 14px;
+	--h1-font-size: 22px;
+	--h2-font-size: 30px;
+	--nav-font-size: 16px;
+	--category-button-font-size: 16px;
+	--submit-button-font-size: 14px;
 
-		/* Poids de police */
-		--h1-font-weight: 800;
-		--h2-font-weight: 700;
-		--nav-font-weight: 400;
-		--category-button-font-weight: 700;
-		--submit-button-font-weight: 700;
+	/* Poids de police */
+	--h1-font-weight: 800;
+	--h2-font-weight: 700;
+	--nav-font-weight: 400;
+	--category-button-font-weight: 700;
+	--submit-button-font-weight: 700;
 
-		/* Familles de polices */
-		--main-font-family: 'Work Sans';
-		--h1-font-family: 'Syne';
-		--h2-font-family: 'Syne';
-		--category-button-font-family: 'Syne';
-		--submit-button-font-family: 'Syne';
+	/* Familles de polices */
+	--main-font-family: 'Work Sans';
+	--h1-font-family: 'Syne';
+	--h2-font-family: 'Syne';
+	--category-button-font-family: 'Syne';
+	--submit-button-font-family: 'Syne';
 
-		/* Autres */
-		--max-width: 1140px;
-		--box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
-	}
+	/* Autres */
+	--max-width: 1140px;
+	--box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
 
 
 
@@ -77,66 +77,147 @@
 /* ####################################################### RESET CSS ################################################# */
 /* ################################################################################################################### */
 
-	* {
-		background: var(--background-color);
-	}
+* {
+	background: var(--background-color);
+}
 
-	html, body, div, span, applet, object, iframe,
-	h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-	a, abbr, acronym, address, big, cite, code,
-	del, dfn, em, img, ins, kbd, q, s, samp,
-	small, strike, strong, sub, sup, tt, var,
-	b, u, i, center,
-	dl, dt, dd, ol, ul, li,
-	fieldset, form, label, legend,
-	table, caption, tbody, tfoot, thead, tr, th, td,
-	article, aside, canvas, details, embed,
-	figure, figcaption, footer, header, hgroup,
-	menu, nav, output, ruby, section, summary,
-	time, mark, audio, video {
-		margin: 0;
-		padding: 0;
-		border: 0;
-		font-size: 100%;
-		font: inherit;
-		vertical-align: baseline;
-	}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
 
-	/* HTML5 display-role reset for older browsers */
+/* HTML5 display-role reset for older browsers */
 
-	article, aside, details, figcaption, figure,
-	footer, header, hgroup, menu, nav, section {
-		display: block;
-	}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
 
-	body {
-		line-height: 1;
-		margin: 0 auto;
-	}
+body {
+	line-height: 1;
+	margin: 0 auto;
+}
 
-	a {
-		text-decoration: none;
-		color: inherit;
-	}
+a {
+	text-decoration: none;
+	color: inherit;
+}
 
-	ol, ul {
-		list-style: none;
-	}
+ol,
+ul {
+	list-style: none;
+}
 
-	blockquote, q {
-		quotes: none;
-	}
+blockquote,
+q {
+	quotes: none;
+}
 
-	blockquote:before, blockquote:after,
-	q:before, q:after {
-		content: '';
-		content: none;
-	}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
 
-	table {
-		border-collapse: collapse;
-		border-spacing: 0;
-	}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
 
 /*    																												   */
 /* ################################################################################################################### */
@@ -149,69 +230,94 @@
 /* ######################################### Définition des styles de base ########################################### */
 /* ################################################################################################################### */
 
-	body {
-		max-width: var(--max-width);
-		font-family: var(--main-font-family);
-		font-size: var(--main-font-size);
-		background: var(--background-color);
-		margin: auto;
-		display: flex;
-		flex-direction: column;
-		min-height: 100vh;
-	}
+body {
+	max-width: var(--max-width);
+	font-family: var(--main-font-family);
+	font-size: var(--main-font-size);
+	background: var(--background-color);
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
 
-	main {
-		padding: 0 8em;
-		flex: 1 0 auto;
-	}
+main {
+	padding: 0 8em;
+	flex: 1 0 auto;
+}
 
-	.header {
-		display: flex;
-		justify-content: space-between;
-		margin: 3.5em 0;
-	}
+.header {
+	display: flex;
+	justify-content: space-between;
+	margin: 3.5em 0;
+}
 
-	section {
-		margin: 4em 0;
-	}
+section {
+	margin: 4em 0;
+}
 
-	h1 {
-		display: flex;
-		flex-direction: column;
-		font-family: var(--h1-font-family);
-		font-size: var(--h1-font-size);
-		font-weight: var(--h1-font-weight);
-		color: var(--main-color);
-	}
+h1 {
+	display: flex;
+	flex-direction: column;
+	font-family: var(--h1-font-family);
+	font-size: var(--h1-font-size);
+	font-weight: var(--h1-font-weight);
+	color: var(--main-color);
+}
 
-	.header__subtitle {
-		font-family: var(--main-font-family);
-		font-size: 10px;
-		letter-spacing: 0.1em;
-		margin-top: 0.3em;
-	}
+.header__subtitle {
+	font-family: var(--main-font-family);
+	font-size: 10px;
+	letter-spacing: 0.1em;
+	margin-top: 0.3em;
+}
 
-	h2 {
-		font-family: var(--h2-font-family);
-		font-weight: var(--h2-font-weight);
-		font-size: var(--h2-font-size);
-		color: var(--secondary-color);
-	}
+h2 {
+	font-family: var(--h2-font-family);
+	font-weight: var(--h2-font-weight);
+	font-size: var(--h2-font-size);
+	color: var(--secondary-color);
+}
 
-	.form__label {
-		color: var(--text-color);
-		font-family: var(--main-font-family);
-		font-size: var(--main-font-size);
-		font-style: normal;
-		font-weight: var(--label-weight);
-		line-height: normal;
-		margin: 2em 0 1em 0;
-	}
+.form__label {
+	color: var(--text-color);
+	font-family: var(--main-font-family);
+	font-size: var(--main-font-size);
+	font-style: normal;
+	font-weight: var(--label-weight);
+	line-height: normal;
+	margin: 2em 0 1em 0;
+}
 
-	.portfolio__title {
-		text-align: center;
-		margin: 3.25em 0 1.1em 0;
-	}
+.portfolio__title {
+	text-align: center;
+	margin: 3.25em 0 1.1em 0;
+}
+
+
+/* à confirmer, spécifier et déplacer dans une section générale... */
+
+.link {
+	cursor: pointer;
+}
+
+.btn {
+	cursor: pointer;
+	border-radius: 60px;
+	border: none;
+	padding: 0.65em 2.5em;
+	margin: 2em auto;
+	background-color: var(--submit-button-background-color);
+	color: var(--submit-button-color);
+	font-family: var(--submit-button-font-family);
+	font-size: var(--submit-button-font-size);
+	font-weight: var(--submit-button-font-weight);
+}
+
+button, input[type="submit"], select {
+	cursor: pointer;
+}
+
 
 
 /*    																												  */
@@ -219,63 +325,63 @@
 /* ################################### Définition des styles de menu de navigation ################################## */
 /* ################################################################################################################## */
 
-	.nav-list {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		list-style-type: none;
-	}
+.nav-list {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	list-style-type: none;
+}
 
-	.nav-list__item {
-		padding: 0 1.35em;
-		font-size: var(--nav-font-size);
-	}
+.nav-list__item {
+	padding: 0 1.35em;
+	font-size: var(--nav-font-size);
+}
 
-	.nav-list__item--img {
-		width: 1.4em;	
-		margin-top: 0.1em;
-	}
+.nav-list__item--img {
+	width: 1.4em;
+	margin-top: 0.1em;
+}
 
-	li:hover {
-		color: var(--main-color);
-	}
+li:hover {
+	color: var(--main-color);
+}
 
 /*    																												   */
 /* ################################################################################################################### */
 /* ################################ Définition des styles du paragraphe d'introduction ############################### */
 /* ################################################################################################################### */
 
-	.introduction {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		margin: 6em 0;
-		
-	}
+.introduction {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 6em 0;
 
-	.introduction__figure {
-		flex: 1
-	}
+}
 
-	.introduction img {
-		display: block;
-		width: 105%;
-	}
+.introduction__figure {
+	flex: 1
+}
 
-	.introduction__article {
-		flex: 1;
-		margin-left: 7em;
-	}
+.introduction img {
+	display: block;
+	width: 105%;
+}
 
-	.introduction__title {
-		margin-bottom: 1em;
-	}
+.introduction__article {
+	flex: 1;
+	margin-left: 7em;
+}
 
-	.introduction__paragraph {
-		color: var(--text-color);
-		line-height: 1.2;
-		margin: 1em auto;
-	}
+.introduction__title {
+	margin-bottom: 1em;
+}
+
+.introduction__paragraph {
+	color: var(--text-color);
+	line-height: 1.2;
+	margin: 1em auto;
+}
 
 
 
@@ -284,45 +390,50 @@
 /* ###################################### Définition des styles de la gallerie ####################################### */
 /* ################################################################################################################### */
 
-	.categories {
-		text-align: center;
-		margin-bottom: 2em;
-	}
+.categories {
+	text-align: center;
+	margin-bottom: 2em;
+}
 
-	.categories button {
-		background-color: var(--button-background-color);
-		color: var(--button-color);
-		min-width: 6em;
-		border: 1px solid var(--button-border-color);
-		border-radius: 14em;
-		padding: 0.6em 1em;
-		margin: 1.5em 0.4em;
-		font-family: var(--category-button-font-family);
-		font-weight: var(--category-button-font-weight);
-		font-size: var(--category-button-font-size);
-	}
+.categories button {
+	background-color: var(--button-background-color);
+	color: var(--button-color);
+	min-width: 6em;
+	border: 1px solid var(--button-border-color);
+	border-radius: 14em;
+	padding: 0.6em 1em;
+	margin: 1.5em 0.4em;
+	font-family: var(--category-button-font-family);
+	font-weight: var(--category-button-font-weight);
+	font-size: var(--category-button-font-size);
+}
 
-	.categories button.selected {
-		background-color: var(--selected-button-background);
-		color: var(--selected-button-color);
-	}
+.categories button.selected {
+	background-color: var(--selected-button-background);
+	color: var(--selected-button-color);
+}
 
-	.gallery {
-		width: 100%;
-		display: grid;
-		grid-template-columns: 1fr 1fr 1fr;
-		grid-column-gap: 1.5em;
-		grid-row-gap: 1.5em;
-	}
+.categories button:hover {
+	background-color: var(--selected-button-background);
+	color: var(--selected-button-color);
+}
 
-	.gallery img {
-		width: 100%;
-	}
+.gallery {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-column-gap: 1.5em;
+	grid-row-gap: 1.5em;
+}
 
-	.gallery figcaption {
-		color: var(--text-color);
-	}
-	
+.gallery img {
+	width: 100%;
+}
+
+.gallery figcaption {
+	color: var(--text-color);
+}
+
 
 
 /*    																												   */
@@ -330,74 +441,75 @@
 /* ################################### Définition des styles de la section contact ################################### */
 /* ################################################################################################################### */
 
-	.contact {
-		width: 50%;
-		margin: auto;
-		text-align: center;
-	}
+.contact {
+	width: 50%;
+	margin: auto;
+	text-align: center;
+}
 
-	.contact__title{
-		margin-bottom: 0.65em;
-	}
+.contact__title {
+	margin-bottom: 0.65em;
+}
 
-	.contact__form {
-		text-align: left;
-		margin-top: 2.15em;
-		display: flex;
-		flex-direction: column;
-	}
+.contact__form {
+	text-align: left;
+	margin-top: 2.15em;
+	display: flex;
+	flex-direction: column;
+}
 
-	.contact__form--label {
-		margin-left: 2em;
-	}
+.contact__form--label {
+	margin-left: 2em;
+}
 
-	.contact__paragraph {
-		color: var(--text-color);	
-	}
+.contact__paragraph {
+	color: var(--text-color);
+}
 
-	.contact__form--input:not([type="submit"])  {
-		height: 3em;
-		width: 22.5em;
-		margin: auto;
-		padding: 0 1em;
-		font-size: 1.2em;
-		border: none;
-		box-shadow: var(--box-shadow);
-		background-color: white;
-	}
+.contact__form--input:not([type="submit"]) {
+	height: 3em;
+	width: 22.5em;
+	margin: auto;
+	padding: 0 1em;
+	font-size: 1.2em;
+	border: none;
+	box-shadow: var(--box-shadow);
+	background-color: white;
+}
 
-	.contact__form--textaera {
-		border: none;
-		box-shadow: var(--box-shadow);
-		max-width: var(--max-width);
-		font-family: var(--main-font-family);
-		font-size: 1.2em;
-		padding: 1em 0.5em 0 0.2em;
-		width: 23.3em;
-		height: 9em;
-		margin: auto;
-		background-color: white;
-	}
+.contact__form--textaera {
+	border: none;
+	box-shadow: var(--box-shadow);
+	max-width: var(--max-width);
+	font-family: var(--main-font-family);
+	font-size: 1.2em;
+	padding: 1em 0.5em 0 0.2em;
+	width: 23.3em;
+	height: 9em;
+	margin: auto;
+	background-color: white;
+}
 
-	.contact__form--submit {
-		padding: 0.65em 4em;
-	}
+.contact__form--submit {
+	padding: 0.65em 4em;
+}
 
-	.contact__form--submit, .login__form--submit {
-		flex-shrink: 0;
-		margin: 2em auto;
-		background-color: var(--submit-button-background-color);
-		border-radius: 60px;
-		color: var(--submit-button-color);
-		font-family: var(--submit-button-font-family);
-		font-size: var(--submit-button-font-size);
-		font-weight: var(--submit-button-font-weight);
-		font-style: normal;
-		line-height: normal;
-		text-align: center;
-		box-shadow: none;
-		border: none;
-	}
+.contact__form--submit,
+.login__form--submit {
+	flex-shrink: 0;
+	margin: 2em auto;
+	background-color: var(--submit-button-background-color);
+	border-radius: 60px;
+	color: var(--submit-button-color);
+	font-family: var(--submit-button-font-family);
+	font-size: var(--submit-button-font-size);
+	font-weight: var(--submit-button-font-weight);
+	font-style: normal;
+	line-height: normal;
+	text-align: center;
+	box-shadow: none;
+	border: none;
+}
 
 
 
@@ -407,68 +519,69 @@
 /* ################################# Définition des styles du formulaire de connexion ################################ */
 /* ################################################################################################################### */
 
-	.login {
-		display: flex;
-		align-items: center;
-		flex-direction: column;
-		width: 50%;
-		margin: 9.25em auto;
-	}
+.login {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	width: 50%;
+	margin: 9.25em auto;
+}
 
-	.login {
-		text-align: center;
-	}
+.login {
+	text-align: center;
+}
 
-	.login__title {
-		margin-bottom: 0.75em;
-	}
+.login__title {
+	margin-bottom: 0.75em;
+}
 
-	.login__form {
-		text-align: left;
-		margin-top: 30px;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-	}
+.login__form {
+	text-align: left;
+	margin-top: 30px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
 
-	.nav-list__item--active {
-		color: #000;
-		text-align: center;
-		font-family: Work Sans;
-		font-size: 16px;
-		font-style: normal;
-		font-weight: 600;
-		line-height: normal;
-	}
+.nav-list__item--active {
+	color: #000;
+	text-align: center;
+	font-family: Work Sans;
+	font-size: 16px;
 
-	.login__form--fields {
-		display: flex;
-		flex-direction: column;
-	}
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+}
 
-	.login__form--input {
-		width: 22.5em;
-		padding: 0.9em 0.6em;
-		font-size: 1.2em;
-		border: none;
-		box-shadow: var(--box-shadow);
-		background-color: white;
-	}
+.login__form--fields {
+	display: flex;
+	flex-direction: column;
+}
 
-	.login__form--forgotten-password-link {
-		text-align: center;
-		color: var(--text-color);
-		font-family: Work Sans;
-		font-size: 14px;
-		font-style: normal;
-		font-weight: 500;
-		line-height: normal;
-		text-decoration-line: underline;
-	}
+.login__form--input {
+	width: 22.5em;
+	padding: 0.9em 0.6em;
+	font-size: 1.2em;
+	border: none;
+	box-shadow: var(--box-shadow);
+	background-color: white;
+}
 
-	.login__form--submit {
-		padding: 0.65em 2.5em;
-	}
+.login__form--forgotten-password-link {
+	text-align: center;
+	color: var(--text-color);
+	font-family: Work Sans;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	text-decoration-line: underline;
+}
+
+.login__form--submit {
+	padding: 0.65em 2.5em;
+}
 
 
 /*    																												   */
@@ -476,22 +589,22 @@
 /* ###################################### Définition des styles du pied de page ###################################### */
 /* ################################################################################################################### */
 
-	.footer__nav-list {
-		display: flex;
-		justify-content: flex-end;
-	}
+.footer__nav-list {
+	display: flex;
+	justify-content: flex-end;
+}
 
-	.footer__nav-item {
-		color: var(--footer-color);
-		font-family: var(--main-font-family);
-		font-size: var(--main-font-size);
-		font-style: normal;
-		font-weight: var(--footer-weight);
-		line-height: normal;
-	    margin-top: 4em;
-		margin-bottom: 1em;
-		transform: translateX(4em);
-	}
+.footer__nav-item {
+	color: var(--footer-color);
+	font-family: var(--main-font-family);
+	font-size: var(--main-font-size);
+	font-style: normal;
+	font-weight: var(--footer-weight);
+	line-height: normal;
+	margin-top: 4em;
+	margin-bottom: 1em;
+	transform: translateX(4em);
+}
 
 
 
@@ -501,110 +614,413 @@
 /* ######################## et d'accessibilité mais qui ne sont pas conformes à la maquette ########################## */
 /* ################################################################################################################### */
 
-	.hidden-title {
-		position: absolute;
-		width: 1px;
-		height: 1px;
-		padding: 0;
-		margin: -1px;
-		overflow: hidden;
-		clip: rect(0,0,0,0);
-		border: 0;
-	}
+.hidden-title {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	border: 0;
+}
 
 
 
 
 /*    																												   */
 /* ################################################################################################################### */
-/* ##################### Définition des styles de la page en mode édition (utiliusateur connecté ##################### */
+/* ##################### Définition des styles de la page en mode édition (utiliusateur connecté) #################### */
 /* ################################################################################################################### */
 
-	.edit-bar {
-		display: flex;
-		margin: 0;
-		width: 100vw;
-		height: 59px;
-		flex-shrink: 0;
-		background-color: #000;
-		position: fixed;
-		top: 0;
-		left: 0;	
-		justify-content: center; 
-		align-items: center; 
-	}
+.edit-bar {
+	display: flex;
+	margin: 0;
+	width: 100vw;
+	height: 59px;
+	flex-shrink: 0;
+	background-color: #000;
+	position: fixed;
+	top: 0;
+	left: 0;
+	justify-content: center;
+	align-items: center;
+}
 
-	.edit-bar__icon {
-		background-color: #000;
-		width: 15.58px;
-		margin-right: 1em;
+.edit-bar__icon {
+	background-color: #000;
+	width: 15.58px;
+	margin-right: 1em;
 
-	}
+}
 
-	.edit-bar__title {
-		background-color: #000;
-		color: white;
-		text-align: center;
-		font-family: Work Sans;
-		font-size: 16px;
-		font-style: normal;
-		font-weight: 400;
-		line-height: normal;
-		display: flex;
-		align-items: auto;
-	}
+.edit-bar__title {
+	background-color: #000;
+	color: white;
+	text-align: center;
+	font-family: Work Sans;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	display: flex;
+	align-items: auto;
+}
 
-	.header.logged {
-		display: flex;
-		flex-direction: column;
-	}
+.header.logged {
+	display: flex;
+	flex-direction: column;
+}
 
-	.header-block.logged {
-		margin-top: 59px;
-		display: flex;
-		justify-content: space-between;
-	  }
-	  
-	.portfolio__title--section.logged {
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-		justify-content: center;
-		align-items: center;
-		margin-bottom: 4.5em;
-	  }
+.header-block.logged {
+	margin-top: 59px;
+	display: flex;
+	justify-content: space-between;
+}
 
-	.modifier-link__content.logged {
+.portfolio__title--section.logged {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 4.5em;
+}
+
+.modifier-link__content.logged {
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-end;
 	align-items: flex-end;
 	padding-top: 4.5em;
 	padding-left: 1.5em;
-	}
+}
 
-	.modifier-link__content--title {
+.modifier-link__content--title {
 	margin-left: 0.35em;
 	align-items: flex-end;
-	}
+}
 
-	.modifier-link__content--icon {
+.modifier-link__content--icon {
 	color: #000;
-	}
+}
 
 
-	.guest {
-		width: 100%;
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		align-items: center;
-	}
+.guest {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
 
-	.hidden {
-		display: none;
-	}
+.hidden {
+	display: none;
+}
 
-	.visible {
-		display: inherit;
-	}
+.visible {
+	display: inherit;
+}
+
+
+
+
+
+
+/* ################################################################################################################### */
+/* ######################################### Définition des styles du modal ########################################## */
+/* ################################################################################################################### */
+
+.modifier-link__btn {
+	border: none;
+}
+
+
+
+.modal-container__overlay {
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
+.modal-container__modal {
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	min-width: 630px;
+	transform: translate(-50%, -50%);
+	background-color: white;
+	margin-top: 10%;
+	border-radius: 10px;
+}
+
+.delete-modal__title {
+	font-family: Work Sans;
+	font-size: 26px;
+	font-weight: 400;
+	line-height: 30px;
+	letter-spacing: 0em;
+	text-align: center;
+	color: #000000;
+	margin: 3em 0 1.5em 0;
+}
+
+.delete-modal__btn--close {
+	position: absolute;
+	right: 3em;
+	top: 3em;
+	width: 0.85em;
+	height: 0.85em;
+}
+
+.delete-modal__gallery {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-gap: 10px;
+}
+
+.delete-modal__gallery__item {
+	width: 100%;
+	position: relative;
+	width: 6em;
+}
+
+.delete-modal__gallery__item--img {
+	width: 100%;
+	height: auto;
+}
+
+.delete-modal__gallery__item--delete-icon {
+	position: absolute;
+	top: 0;
+	right: 0;
+	background-color: black;
+}
+
+.gallery__item {
+	width: 100%;
+	position: relative;
+	/* Assurez-vous que c'est ici */
+}
+
+.gallery__item--img {
+	width: 100%;
+	height: auto;
+}
+
+.gallery__item--delete-icon {
+	position: absolute;
+	top: 0;
+	right: 0;
+	background-color: black;
+	width: 2em;
+	height: 2em;
+	cursor: pointer;
+
+}
+
+.hbar {
+	width: calc(100% - 10em);
+	height: 1px;
+	background-color: #B3B3B3;
+}
+
+.delete-modal__btn--upload {
+	display: flex;
+	margin: 2em auto;
+	cursor: pointer;
+	border-radius: 60px;
+	border: none;
+	padding: 0.65em 2.5em;
+	background-color: var(--submit-button-background-color);
+	color: var(--submit-button-color);
+	font-family: var(--submit-button-font-family);
+	font-size: var(--submit-button-font-size);
+	font-weight: var(--submit-button-font-weight);
+	align-items: center;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+}
+
+.upload-modal__btn{
+	margin: 3em 3em 0 3em;
+}
+
+.upload-modal__btn--back {
+	width: 1.5em;
+}
+
+.upload-modal__btn--close {
+	width: 1.5em;
+}
+
+.upload-modal__title {
+	font-family: Work Sans;
+	font-size: 26px;
+	font-weight: 400;
+	line-height: 30px;
+	letter-spacing: 0em;
+	text-align: center;
+	color: #000000;
+	margin: 0.5em 0;
+}
+
+.upload-modal__upload-elements {
+	display: flex;
+	flex-direction: column;
+	width: auto;
+	height: 169px;
+	top: 786px;
+	left: 510px;
+	margin: 10%;
+	border-radius: 3px;
+	background-color: #E8F1F6;
+}
+
+.upload-modal__upload-elements * {
+	background-color: #E8F1F6;
+}
+
+.upload-modal__btn-container {
+	display: flex;
+	justify-content: space-between;
+}
+
+#uploadLogo {
+	width: 76px;
+	padding: 0.5em calc(50% - 38px);
+}
+
+.upload-modal__file-input__description {
+	font-family: Work Sans;
+	font-size: 10px;
+	font-weight: 400;
+	line-height: 12px;
+	letter-spacing: 0em;
+	text-align: center;
+	color: #444444;
+	padding: 0.5em 0 1em 0;
+}
+
+.upload-img {
+	width: auto;
+	height: 193px;
+}
+
+.upload-modal__btn--upload-file {
+	background-color: #CBD6DC;
+	color: #306685;
+	margin: 0.5em auto;
+}
+
+
+.delete-modal__gallery__item--delete-icon {
+	position: absolute;
+	width: 1em;
+	height: 1em;
+	top: 0.35em;
+	right: 0.35em;
+	background-color: black;
+	padding: 3px 4px;
+	border-radius: 2px;
+}
+
+.delete-modal__gallery {
+	margin: 3.5em 5em;
+
+}
+
+
+/* Styles du formulaire d'upload */
+
+.upload-modal__form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.upload-modal__form__input {
+	padding: 0.9em 0.6em;
+	font-size: 1.2em;
+	border: none;
+	box-shadow: var(--box-shadow);
+	background-color: white;
+	margin: 1em 0;
+}
+
+.upload-modal__form__input--title {
+	width: 29em;
+}
+
+.upload-modal__form__label--title {
+	position: relative;
+	left: -17em;
+}
+
+
+.upload-modal__form__input--category {
+	width: 30.5em;
+}
+
+.upload-modal__form__input--category {
+/* Autres styles */
+	background-position: right 50px center; /* Décale l'image d'arrière-plan de 10px à partir de la droite */
+}
+
+.upload-modal__form__label--category {
+	position: relative;
+	left: -16em;
+}
+
+
+.upload-modal__form__input--category {
+/* Masquer la flèche par défaut */
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+
+	/* Ajouter votre propre icône */
+	background-image: url('../icons/down.svg');
+	background-repeat: no-repeat;
+	background-position: right 10px center; /* Ajustez la position comme nécessaire */
+	padding-right: 10px; /* Ajoutez du padding pour éviter que le texte ne chevauche l'icône */
+}
+
+.upload-modal__form__input--category {
+	color: #757575;
+}
+
+.upload-modal__form__input--category option {
+	color: black; /* ou toute autre couleur pour les autres options */
+}
+
+.upload-modal__form__btn--submit {
+	width: 16em;
+}
+
+.modal-container__modal--upload-modal {
+	display: none;
+}
+
+
+.modal-container__modal--delete-modal {
+	display: none;
+}
+
+
+.modal-container__overlay {
+	display: none;
+}
+
+.modal-container__modal, .modal-container__modal, .upload-modal__upload-modal, .delete-modal__delete-modal {
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+
+
+

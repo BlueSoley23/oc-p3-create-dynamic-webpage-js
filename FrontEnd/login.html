@@ -23,26 +23,7 @@
     <title>Sophie Bluel - Architecte d'intérieur - Connexion</title>
 
     <!-- Icône d'onglet par défaut (icône représentant le portrait de l'architecte, Sophie Bluel) -->
-	<link rel="icon" href="./assets/icons/browser_icons/portrait_Sophie_Bluel/favicon.ico">
-
-<!--
-    Autres icônes disponibles (remplacer la ligne pécédente par la ligne qui correspond à l'icône choisie) :
-
-        Icône représentant un travail de Sophie Bluel :
-            <link rel="icon" href="./assets/icons/browser_icons/work_example_picture/favicon.ico">
-
-        Icône minimaliste de design d'intérieur :
-            <link rel="icon" href="./assets/icons/browser_icons/designer_minimalist_logo/favicon.ico">
-
-        Icône moderne de design d'intérieur :
-            <link rel="icon" href="./assets/icons/browser_icons/designer_modern_logo/favicon.ico">
-
-        Icône artistique de design d'intérieur :
-            <link rel="icon" href="./assets/icons/browser_icons/designer_artistic_logo/favicon.ico">
-
-        Icône représentant le portrait de l'architecte, Sophie Bluel (par défaut):
-            <link rel="icon" href="./assets/icons/browser_icons/portrait_Sophie_Bluel/favicon.ico">
-    -->
+    <link rel="icon" href="./assets/icons/browser_icons/portrait_Sophie_Bluel/favicon.ico">
 
     <!-- Balise permettant de définir la largeur de la page en fonction de la largeur de l'écran -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -53,11 +34,11 @@
 
     <!-- Import des polices Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap"
-        rel="stylesheet">
+          rel="stylesheet">
 
     <!-- Description de la page -->
     <meta name="description"
-        content="Page de connexion de l'artiste pour accéder aux fonctionnalités d'édition des travaux.">
+          content="Page de connexion de l'artiste pour accéder aux fonctionnalités d'édition des travaux.">
 
     <!-- Import du fichier CSS -->
     <link rel="stylesheet" href="./assets/css/style.css">
@@ -69,106 +50,106 @@
 
 <body>
 
-	<!-- En-tête de la page -->
-	<!-- Block : header -->
-	<header class="header">
+<!-- En-tête de la page -->
+<!-- Block : header -->
+<header class="header">
 
-		<!-- En-tête de la page contenant un titre et un sous titre-->
-		<!-- Elements : title /  subtitle -->
-		<a href="./index.html"><h1 class="header__title">Sophie Bluel <span class="header__subtitle">Architecte d'intérieur</span></h1></a>
+    <!-- En-tête de la page contenant un titre et un sous titre-->
+    <!-- Elements : title /  subtitle -->
+    <a href="./index.html"><h1 class="header__title">Sophie Bluel <span class="header__subtitle">Architecte d'intérieur</span></h1></a>
 
-		<!-- Navigation principale -->
-		<!-- Element : nav -->
-		<nav class="header__nav">
+    <!-- Navigation principale -->
+    <!-- Element : nav -->
+    <nav class="header__nav">
 
-			<!-- Liste du menu de liens vers les pages d'accueil, de contact, de connexion, et vers le profil Instagram de Sophie Bluel -->
-			<!-- Block : nav-list -->
-			<ul class="nav-list">
+        <!-- Liste du menu de liens vers les pages d'accueil, de contact, de connexion, et vers le profil Instagram de Sophie Bluel -->
+        <!-- Block : nav-list -->
+        <ul class="nav-list">
 
-				<!-- Elements : item -->
-				<li class="nav-list__item"><a href="./index.html">projets</a></li>
-				<li class="nav-list__item"><a href=#>contact</a></li>
-				<!-- Modifier : active -->
-				<li class="nav-list__item nav-list__item--active"><a href="./login.html">login</a></li>
-				<li class="nav-list__item"><a href="https://instagram.com"><img src="./assets/icons/instagram.png" alt="Instagram" class="nav-list__item--img"></a></li>
+            <!-- Elements : item -->
+            <li class="nav-list__item"><a href="./index.html">projets</a></li>
+            <li class="nav-list__item"><a href=#>contact</a></li>
+            <!-- Modifier : active -->
+            <li class="nav-list__item nav-list__item--active"><a href="./login.html">login</a></li>
+            <li class="nav-list__item"><a href="https://instagram.com"><img src="./assets/icons/instagram.png" alt="Instagram" class="nav-list__item--img"></a></li>
 
-			</ul>
+        </ul>
 
-		</nav>
+    </nav>
 
-	</header>
+</header>
 
-    <!-- Contenu principal de la page -->
-    <!-- Block : main -->
-    <main class="main">
+<!-- Contenu principal de la page -->
+<!-- Block : main -->
+<main class="main">
 
-        <!-- Section de connexion, élements de formulaire -->
-        <!-- Block : login -->
-        <section class="login">
+    <!-- Section de connexion, élements de formulaire -->
+    <!-- Block : login -->
+    <section class="login">
 
-            <!-- Titre de la section -->
-            <!-- Élement : title -->
-            <h2 class="login__title">Log In</h2>
+        <!-- Titre de la section -->
+        <!-- Élement : title -->
+        <h2 class="login__title">Log In</h2>
 
-            <!-- Formulaire de connexion -->
-            <!-- Élement : form -->
-            <form action="#" method="post" class="login__form">
+        <!-- Formulaire de connexion -->
+        <!-- Élement : form -->
+        <form action="#" method="post" class="login__form">
 
-                <!-- Champs de formulaire -->
-                <!-- Modifier : fields -->
-                <div class="login__form--fields">
+            <!-- Champs de formulaire -->
+            <!-- Modifier : fields -->
+            <div class="login__form--fields">
 
-                    <!-- Labels indiquant l'entrée attendue et champs de formulaire de type "text" pour les identifiants avec un texte 
-                        par défaut (placeholder) et l'élement autocomplete pour que le navigateur enregistre et suggère les identifants -->
-                    <!-- Modifiers : label / input-->
+                <!-- Labels indiquant l'entrée attendue et champs de formulaire de type "text" pour les identifiants avec un texte
+                    par défaut (placeholder) et l'élement autocomplete pour que le navigateur enregistre et suggère les identifants -->
+                <!-- Modifiers : label / input-->
 
-                        <!-- E-mail -->
-                        <label for="email" class="login__form--label form__label">E-mail</label>
-                        <input type="text" id="email" name="email" class="login__form--input" autocomplete="email"
-                            placeholder="Votre e-mail">
+                <!-- E-mail -->
+                <label for="email" class="login__form--label form__label">E-mail</label>
+                <input type="text" id="email" name="email" class="login__form--input" autocomplete="email"
+                       placeholder="Votre e-mail">
 
-                        <!-- Mot de passe -->
-                        <label for="password" class="login__form--label form__label">Mot de passe</label>
-                        <input type="password" id="password" name="password" class="login__form--input"
-                            autocomplete="current-password" placeholder="Votre mot de passe">
+                <!-- Mot de passe -->
+                <label for="password" class="login__form--label form__label">Mot de passe</label>
+                <input type="password" id="password" name="password" class="login__form--input"
+                       autocomplete="current-password" placeholder="Votre mot de passe">
 
-                </div>
+            </div>
 
-                <!-- Bouton de soumission du formulaire -->
-                <!-- Modifier : submit -->
-                <input type="submit" class="login__form--submit" value="Se connecter">
+            <!-- Bouton de soumission du formulaire -->
+            <!-- Modifier : submit -->
+            <input type="submit" class="login__form--submit" value="Se connecter">
 
-                <!-- Lien vers la page de réinitialisation du mot de passe -->
-                <!-- Modifier : forgotten-password-link -->
-                <a href="#" class="login__form--forgotten-password-link">Mot de passe oublié</a>
+            <!-- Lien vers la page de réinitialisation du mot de passe -->
+            <!-- Modifier : forgotten-password-link -->
+            <a href="login.html" class="login__form--forgotten-password-link">Mot de passe oublié</a>
 
-            </form>
+        </form>
 
-        </section>
+    </section>
 
-    </main>
+</main>
+
+<!-- Pied de page -->
+<!-- Block : footer -->
+<footer class="footer">
 
     <!-- Pied de page -->
-    <!-- Block : footer -->
-    <footer class="footer">
+    <!-- Element : nav -->
+    <nav class="footer__nav">
 
-        <!-- Pied de page -->
-        <!-- Element : nav -->
-        <nav class="footer__nav">
+        <!-- Navigation secondaire -->
+        <!-- Element : nav-list -->
+        <ul class="footer__nav-list">
 
-            <!-- Navigation secondaire -->
-            <!-- Element : nav-list -->
-            <ul class="footer__nav-list">
+            <!-- Lien vers les mentions légales -->
+            <!-- Element : nav-item / Modifier : login -->
+            <li class="footer__nav-item">Mentions Légales</li>
 
-                <!-- Lien vers les mentions légales -->
-                <!-- Element : nav-item / Modifier : login -->
-                <li class="footer__nav-item">Mentions Légales</li>
+        </ul>
 
-            </ul>
+    </nav>
 
-        </nav>
-
-    </footer>
+</footer>
 
 </body>
 
