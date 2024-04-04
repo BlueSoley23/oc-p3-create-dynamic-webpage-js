@@ -1,25 +1,14 @@
 // #######################################################################################################
 // #######################################################################################################
-// #####################   DECLARATION DES FONCTIONS ET CONSTANTES DE LA GALLERIE   ######################
-// #######################################################################################################
-// #######################################################################################################
-
-
-
-
-
-// #######################################################################################################
 // #############   Déclaration des constantes correspondantes aux éléments du DOM utilisés   #############
 // #######################################################################################################
+// #######################################################################################################
 
-// Récupération de l'élément du DOM qui contiendra les boutons de filtrage
-const categoriesSection = document.querySelector('.categories');
+    // Récupération de l'élément du DOM qui contiendra les travaux
+    const gallery = document.querySelector('.gallery');
 
-// DÉCLARATION DES FONCTIONS EXPORTÉES DEPUIS LE MODULE
-
-// Récupération de l'élément du DOM qui contiendra les travaux
-const gallery = document.querySelector('.gallery');
-
+    // Récupération de l'élément du DOM qui contiendra les boutons de filtrage
+    const categoriesSection = document.querySelector('.categories');
 
 
 /*                                                                                                      */
@@ -28,22 +17,22 @@ const gallery = document.querySelector('.gallery');
 // ##############################   Récupération des travaux depuis l'API   ##############################
 // #######################################################################################################
 
-// Déclaration de la fonction asynchrone qui récupère les travaux depuis l'API
-async function getWorks() {
+    // Déclaration de la fonction asynchrone qui récupère les travaux depuis l'API
+    async function getWorks() {
 
-    // Envoie une requête GET à l'API pour récupérer les données des travaux, et attend la réponse avant
-    // de continuer l'exécution du code grâce à await
-    return await fetch('http://localhost:5678/api/works')
+        // Envoie une requête GET à l'API pour récupérer les données des travaux, et attend la réponse avant
+        // de continuer l'exécution du code grâce à await
+        return await fetch('http://localhost:5678/api/works')
 
-    // Si la réponse est reçue, on la convertit en JSON et on la retourne
-        .then(response => response.json())
+        // Si la réponse est reçue, on la convertit en JSON et on la retourne
+            .then(response => response.json())
 
-    // Si la réponse n'est pas reçue, on affiche une boîte de dialogue avec le message d'erreur
-        .catch(error => {
-        alert('Veuillez contacter votre administrateur système en lui indiquant ce message d\'erreur :\n\n' + error);
+        // Si la réponse n'est pas reçue, on affiche une boîte de dialogue avec le message d'erreur
+            .catch(error => {
+            alert('Veuillez contacter votre administrateur système en lui indiquant ce message d\'erreur :\n\n' + error);
 
-    });
-}
+        });
+    }
 
 
 

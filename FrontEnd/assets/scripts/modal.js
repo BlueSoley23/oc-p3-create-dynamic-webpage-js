@@ -1,4 +1,3 @@
-
 import { openDeleteModal, openUploadModal, closeDeleteModalBtn, closeUploadModalBtn, backUploadModalBtn, modifierBtn,
 openUploaModalBtn, deleteModal, uploadModal, overlay, modalContainer }
 from "./modalLib.js";
