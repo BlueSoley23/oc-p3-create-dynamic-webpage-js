@@ -99,15 +99,7 @@ projets dans la galerie.
     - Cliquez sur le bouton de suppression de médias.
     - Vérifiez que le média supprimé n'apparaît plus dans la galerie.
 
-<div class="glitch-embed-wrap" style="position: fixed; top: 0; left: 0; bottom: 0; right: 0; height: 100%; width: 100%;">
-  <iframe
-    src="https://glitch.com/embed/#!/embed/oc-p3-js-portfolio?path=README.md&previewSize=0"
-    title="oc-p3-js-portfolio on Glitch"
-    allow="geolocation; microphone; camera; midi; encrypted-media; xr-spatial-tracking; fullscreen"
-    allowFullScreen
-    style="height: 100%; width: 100%; border: 0;">
-  </iframe>
-</div>
+
 
 <p>
     <a href="http://jigsaw.w3.org/css-validator/check/referer">
