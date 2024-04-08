@@ -67,19 +67,13 @@ function initModals() {
     overlay.style.display = 'none';
 }
 
-// Fonction de fermeture de la modale de suppression, au clic sur le bouton de fermeture (écouteur d'évenement)
-function closeDeleteModal() {
-    deleteModal.style.display = 'none';
-    overlay.style.display = 'none';
-    modalContainer.style.display = 'none';
-}
-
 // DÉCLARATION DES FONCTIONS EXPORTÉES DEPUIS LE MODULE
 export function closeModal() {
     uploadModal.style.display = 'none';
     deleteModal.style.display = 'none';
     overlay.style.display = 'none';
     modalContainer.style.display = 'none';
+    window.location.reload();
 }
 
 export function clearModal() {

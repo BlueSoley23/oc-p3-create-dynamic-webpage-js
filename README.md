@@ -76,7 +76,7 @@ Pour installer ce projet sur votre machine locale, suivez les étapes suivantes 
 Pour utiliser ce projet, naviguez jusqu'à `http://localhost:8080` dans votre navigateur. Vous pouvez voir les projets de
 l'architecte, vous connecter en tant qu'administrateur pour ajouter, modifier ou supprimer des projets, et filtrer les
 projets dans la galerie.
-
+git push -f origin maingit push -f origin main
 ## Tests
 
 1. **Test de la page de connexion** :
