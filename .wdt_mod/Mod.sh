@@ -99,6 +99,8 @@ gitCommitAndPush() {
             else
               echo "Une erreur s\'est produite lors du push."
             fi
+            cd "/home/blue23/Desktop/oc-p3-create-dynamic-webpage-js/.wdt_mod/"
+
 }
 
 export -f gitCommitAndPush
