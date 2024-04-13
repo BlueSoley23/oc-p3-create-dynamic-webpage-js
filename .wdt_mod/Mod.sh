@@ -75,6 +75,9 @@ gitCommitAndPush() {
             username="bluesoley23"
             token=$GITHUB_TOKEN
 
+            # Positionnement dans le répertoire de travail
+            cd "/home/blue23/Desktop/oc-p3-create-dynamic-webpage-js/"
+
             # Ajoute tous les fichiers du répertoire courant à git
             git add .
             

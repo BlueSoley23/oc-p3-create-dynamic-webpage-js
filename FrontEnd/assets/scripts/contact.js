@@ -22,20 +22,20 @@ contactForm.addEventListener('submit', function(event) {
     const email = document.getElementById('email').value;
     const message = document.getElementById('message').value;
 
-    document.querySelector('.contact__form--submit').addEventListener('click', () => {
 
-        // Traiter les données du formulaire (par exemple, les envoyer à un serveur)
-        // ...
-
-        // Vider les champs du formulaire
-        contactForm.reset();
-
-        // Recharger la page
-        location.reload();
-
-    });
 });
 
+document.querySelector('.contact__form--submit').addEventListener('click', () => {
 
+    // Traiter les données du formulaire (par exemple, les envoyer à un serveur)
+    // ...
+
+    // Vider les champs du formulaire
+    contactForm.reset();
+
+    // Recharger la page
+    location.reload();
+
+});
 
 
