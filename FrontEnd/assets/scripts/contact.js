@@ -26,6 +26,10 @@ contactForm.addEventListener('submit', function(event) {
 
         // Traiter les données du formulaire (par exemple, les envoyer à un serveur)
         // ...
+
+        // Vider les champs du formulaire
+        contactForm.reset();
+
         // Recharger la page
         location.reload();
 

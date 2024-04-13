@@ -546,7 +546,7 @@ li:hover {
 .nav-list__item--active {
 	color: #000;
 	text-align: center;
-	font-family: Work Sans;
+	font-family: var(--main-font-family);
 	font-size: 16px;
 
 	font-style: normal;
@@ -571,7 +571,7 @@ li:hover {
 .login__form--forgotten-password-link {
 	text-align: center;
 	color: var(--text-color);
-	font-family: Work Sans;
+	font-family: var(--main-font-family);
 	font-size: 14px;
 	font-style: normal;
 	font-weight: 500;
@@ -658,13 +658,13 @@ li:hover {
 	background-color: #000;
 	color: white;
 	text-align: center;
-	font-family: Work Sans;
+	font-family: var(--main-font-family);
 	font-size: 16px;
 	font-style: normal;
 	font-weight: 400;
 	line-height: normal;
 	display: flex;
-	align-items: auto;
+	align-items: center;
 }
 
 .header.logged {
@@ -758,7 +758,7 @@ li:hover {
 }
 
 .delete-modal__title {
-	font-family: Work Sans;
+	font-family: var(--main-font-family);
 	font-size: 26px;
 	font-weight: 400;
 	line-height: 30px;
@@ -859,14 +859,14 @@ li:hover {
 }
 
 .upload-modal__title {
-	font-family: Work Sans;
+	font-family: var(--main-font-family);
 	font-size: 26px;
 	font-weight: 400;
 	line-height: 30px;
 	letter-spacing: 0em;
 	text-align: center;
 	color: #000000;
-	margin: 0.5em 0;
+	margin: 1.5em 9em;
 }
 
 .upload-modal__upload-elements {
@@ -885,6 +885,10 @@ li:hover {
 	background-color: #E8F1F6;
 }
 
+.upload-modal__upload-area {
+	margin: 4em 0;
+}
+
 .upload-modal__btn-container {
 	display: flex;
 	justify-content: space-between;
@@ -896,7 +900,7 @@ li:hover {
 }
 
 .upload-modal__file-input__description {
-	font-family: Work Sans;
+	font-family: var(--main-font-family);
 	font-size: 10px;
 	font-weight: 400;
 	line-height: 12px;

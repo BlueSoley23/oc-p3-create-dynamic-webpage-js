@@ -14,314 +14,317 @@
 
 <html lang="fr">
 
-<head>
+    <head>
+        <!-- En-tête de la page -->
+        <meta charset="UTF-8">
+
+        <!-- Titre de la page (apparaissant dans l'onglet du navigateur) -->
+        <title>Sophie Bluel - Architecte d'intérieur - Portfolio</title>
+
+        <!-- Icône d'onglet par défaut (icône représentant le portrait de l'architecte, Sophie Bluel, autres icones disponibles dans /browser_icons... ) -->
+        <link rel="icon" href="./assets/icons/browser_icons/portrait_Sophie_Bluel/favicon.ico">
+
+        <!-- Balise permettant de définir la largeur de la page en fonction de la largeur de l'écran -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Préconnexion aux serveurs Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <!-- Import des polices Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap"
+              rel="stylesheet">
+
+        <!-- Description de la page -->
+        <meta name="description" content="Portfolio de l'artiste, Sophie Bluel - Page d'accueil">
+
+        <!-- Import du fichier CSS -->
+        <link rel="stylesheet" href="./assets/css/style.css">
+
+
+    </head>
+
+    <body>
+
     <!-- En-tête de la page -->
-    <meta charset="UTF-8">
+    <!-- Block : header -->
+    <header class="header">
 
-    <!-- Titre de la page (apparaissant dans l'onglet du navigateur) -->
-    <title>Sophie Bluel - Architecte d'intérieur - Portfolio</title>
-
-    <!-- Icône d'onglet par défaut (icône représentant le portrait de l'architecte, Sophie Bluel, autres icones disponibles dans /browser_icons... ) -->
-    <link rel="icon" href="./assets/icons/browser_icons/portrait_Sophie_Bluel/favicon.ico">
-
-    <!-- Balise permettant de définir la largeur de la page en fonction de la largeur de l'écran -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Préconnexion aux serveurs Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <!-- Import des polices Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap"
-          rel="stylesheet">
-
-    <!-- Description de la page -->
-    <meta name="description" content="Portfolio de l'artiste, Sophie Bluel - Page d'accueil">
-
-    <!-- Import du fichier CSS -->
-    <link rel="stylesheet" href="./assets/css/style.css">
-
-</head>
-
-<body>
-
-<!-- En-tête de la page -->
-<!-- Block : header -->
-<header class="header">
-
-    <!-- Borderau du mode édition (pour les utilisateurs connctés) -->
-    <!-- Element : edit-bar -->
-    <div class="edit-bar hidden">
-        <img src="./assets/icons/edit.svg" alt="Icône du mode édition" class="edit-bar__icon"></img>
-        <p class="edit-bar__title">Mode édition</p>
-    </div>
-
-    <div class="header-block guest">
-        <!-- En-tête de la page contenant un titre et un sous titre-->
-        <!-- Elements : title /  subtitle -->
-        <a href="./index.html">
-            <h1 class="header__title">Sophie Bluel <span class="header__subtitle">Architecte d'intérieur</span></h1>
-        </a>
-
-        <!-- Navigation principale -->
-        <!-- Element : nav -->
-        <nav class="header__nav">
-
-            <!-- Liste du menu de liens vers les pages d'accueil, de contact, de connexion, et vers le profil Instagram de Sophie Bluel -->
-            <!-- Block : nav-list -->
-            <ul class="nav-list">
-
-                <!-- Elements : item -->
-                <!-- Modifier : active -->
-                <li class="nav-list__item nav-list__item--active"><a href="./index.html">projets</a></li>
-                <li class="nav-list__item"><a href='index.html'>contact</a></li>
-                <li class="nav-list__item nav-list__item--login"><a href="./login.html">login</a></li>
-                <li class="nav-list__item nav-list__item--logout hidden"><a href="#">logout</a></li>
-                <li class="nav-list__item"><a href="https://instagram.com"><img src="./assets/icons/instagram.png"
-                                                                                alt="Instagram"
-                                                                                class="nav-list__item--img"></a></li>
-
-            </ul>
-
-        </nav>
-    </div>
-</header>
-
-<!-- Contenu principal de la page -->
-<!-- Block : main -->
-<main class="main">
-
-    <!-- Section d'introduction -->
-    <!-- Block : introduction -->
-    <section class="introduction">
-        <h2 class="hidden-title">Section d'introduction</h2>
-
-        <!-- Image de Sophie Bluel -->
-        <!-- Element : figure -->
-        <figure class="introduction__figure">
-            <img src="./assets/images/sophie-bluel.png" alt="Photo de Sophie Bluel">
-        </figure>
-
-        <!-- Article d'introduction -->
-        <!-- Element : article -->
-        <article class="introduction__article">
-
-            <!-- Titre de l'article -->
-            <!-- Element : title -->
-            <h2 class="introduction__title">Designer d'espace</h2>
-
-            <!-- Paragraphes de l'article -->
-            <!-- Element : paragraph -->
-            <p class="introduction__paragraph">Je raconte votre histoire, je valorise vos idées. Je vous accompagne
-                de la conception à la livraison finale du chantier.</p>
-            <p class="introduction__paragraph">Chaque projet sera étudié en commun, de façon à mettre en valeur les
-                volumes, les matières et les couleurs dans le respect de l’esprit des lieux et le choix adapté des
-                matériaux. Le suivi du chantier sera assuré dans le souci du détail, le respect du planning et du
-                budget.</p>
-            <p class="introduction__paragraph">En cas de besoin, une équipe pluridisciplinaire peut-être constituée
-                : architecte DPLG, décorateur(trice)...</p>
-        </article>
-    </section>
-
-    <!-- Section du portfolio -->
-    <!-- Block : portfolio -->
-    <section class="portfolio">
-        <div class="portfolio__title--section">
-            <!-- Titre de la section -->
-            <!-- Element : title -->
-            <h2 class="portfolio__title">Mes Projets</h2>
-            <button class="modifier-link__btn hidden">
-                <div class="modifier-link__content">
-                    <svg width="17" height="17" viewBox="0 0 17 17" fill="black" xmlns="http://www.w3.org/2000/svg">
-                        <path id="Vector" d="M14.0229 2.18576L14.3939 2.55679C14.6821 2.84503 14.6821 3.31113 14.3939 3.5963L13.5016 4.49169L12.0879 3.07808L12.9803 2.18576C13.2685 1.89751
-								13.7346 1.89751 14.0198 2.18576H14.0229ZM6.93332 8.23578L11.0484 4.11759L12.4621 5.53121L8.34387 9.64633C8.25494 9.73525 8.14455 9.79964 8.02496
-								9.83337L6.23111 10.3455L6.7432 8.55162C6.77693 8.43203 6.84133 8.32164 6.93025 8.23271L6.93332 8.23578ZM11.9408 1.14625L5.89074 7.1932C5.62397
-								7.45998 5.43078 7.78808 5.32959 8.14685L4.4526 11.2133C4.379 11.4708 4.44953 11.7468 4.63965 11.9369C4.82977 12.127 5.10574 12.1976 5.36332
-								12.124L8.42973 11.247C8.79156 11.1427 9.11967 10.9495 9.38338 10.6858L15.4334 4.63888C16.2951 3.77722 16.2951 2.37894 15.4334 1.51728L15.0624
-								1.14625C14.2007 0.284585 12.8024 0.284585 11.9408 1.14625ZM3.19844 2.34214C1.70816 2.34214 0.5 3.55031 0.5 5.04058V13.3812C0.5 14.8715 1.70816
-								16.0796 3.19844 16.0796H11.5391C13.0293 16.0796 14.2375 14.8715 14.2375 13.3812V9.94683C14.2375 9.539 13.9094 9.21089 13.5016 9.21089C13.0937
-								9.21089 12.7656 9.539 12.7656 9.94683V13.3812C12.7656 14.0589 12.2167 14.6078 11.5391 14.6078H3.19844C2.52076 14.6078 1.97188 14.0589 1.97188
-								13.3812V5.04058C1.97188 4.36291 2.52076 3.81402 3.19844 3.81402H6.63281C7.04065 3.81402 7.36875 3.48591 7.36875 3.07808C7.36875 2.67025 7.04065
-								2.34214 6.63281 2.34214H3.19844Z" fill="black"/>
-                    </svg>
-                    <p class="modifier-link__content--title link">Modifier</p>
-                </div>
-            </button>
+        <!-- Borderau du mode édition (pour les utilisateurs connctés) -->
+        <!-- Element : edit-bar -->
+        <div class="edit-bar hidden">
+            <img src="./assets/icons/edit.svg" alt="Icône du mode édition" class="edit-bar__icon">
+            <p class="edit-bar__title">Mode édition</p>
         </div>
 
+        <div class="header-block guest">
+            <!-- En-tête de la page contenant un titre et un sous titre-->
+            <!-- Elements : title /  subtitle -->
+            <a href="./index.html">
+                <h1 class="header__title">Sophie Bluel <span class="header__subtitle">Architecte d'intérieur</span></h1>
+            </a>
 
-        <aside class="modal-container">
-            <div class="modal-container__overlay"></div>
+            <!-- Navigation principale -->
+            <!-- Element : nav -->
+            <nav class="header__nav">
 
-            <div class="modal-container__modals" id="modal">
+                <!-- Liste du menu de liens vers les pages d'accueil, de contact, de connexion, et vers le profil Instagram de Sophie Bluel -->
+                <!-- Block : nav-list -->
+                <ul class="nav-list">
 
-                <div class="modal-container__modal modal-container__modal--delete-modal">
-                    <img src="./assets/icons/close.svg" alt="Icône Fermer" class="delete-modal__btn--close link">
-                    <h2 class="delete-modal__title">Galerie photo</h2>
-                    <div class="delete-modal__gallery"></div>
-                    <hr class="delete-modal__horizontal-bar hbar">
-                    <button class="delete-modal__btn--upload">Ajouter une photo</button>
+                    <!-- Elements : item -->
+                    <!-- Modifier : active -->
+                    <li class="nav-list__item nav-list__item--active"><a href="./index.html">projets</a></li>
+                    <li class="nav-list__item"><a href='index.html'>contact</a></li>
+                    <li class="nav-list__item nav-list__item--login"><a href="./login.html">login</a></li>
+                    <li class="nav-list__item nav-list__item--logout hidden"><a href="#">logout</a></li>
+                    <li class="nav-list__item"><a href="https://instagram.com"><img src="./assets/icons/instagram.png"
+                                                                                    alt="Instagram"
+                                                                                    class="nav-list__item--img"></a></li>
+
+                </ul>
+
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenu principal de la page -->
+    <!-- Block : main -->
+    <main class="main">
+
+        <!-- Section d'introduction -->
+        <!-- Block : introduction -->
+        <section class="introduction">
+            <h2 class="hidden-title">Section d'introduction</h2>
+
+            <!-- Image de Sophie Bluel -->
+            <!-- Element : figure -->
+            <figure class="introduction__figure">
+                <img src="./assets/images/sophie-bluel.png" alt="Photo de Sophie Bluel">
+            </figure>
+
+            <!-- Article d'introduction -->
+            <!-- Element : article -->
+            <article class="introduction__article">
+
+                <!-- Titre de l'article -->
+                <!-- Element : title -->
+                <h2 class="introduction__title">Designer d'espace</h2>
+
+                <!-- Paragraphes de l'article -->
+                <!-- Element : paragraph -->
+                <p class="introduction__paragraph">Je raconte votre histoire, je valorise vos idées. Je vous accompagne
+                    de la conception à la livraison finale du chantier.</p>
+                <p class="introduction__paragraph">Chaque projet sera étudié en commun, de façon à mettre en valeur les
+                    volumes, les matières et les couleurs dans le respect de l’esprit des lieux et le choix adapté des
+                    matériaux. Le suivi du chantier sera assuré dans le souci du détail, le respect du planning et du
+                    budget.</p>
+                <p class="introduction__paragraph">En cas de besoin, une équipe pluridisciplinaire peut-être constituée
+                    : architecte DPLG, décorateur(trice)...</p>
+            </article>
+        </section>
+
+        <!-- Section du portfolio -->
+        <!-- Block : portfolio -->
+        <section class="portfolio">
+            <div class="portfolio__title--section">
+                <!-- Titre de la section -->
+                <!-- Element : title -->
+                <h2 class="portfolio__title">Mes Projets</h2>
+                <div class="modifier-link__content">
+                    <button class="modifier-link__btn hidden">
+                        <svg width="17" height="17" viewBox="0 0 17 17" fill="black" xmlns="http://www.w3.org/2000/svg">
+                            <path id="Vector" d="M14.0229 2.18576L14.3939 2.55679C14.6821 2.84503 14.6821 3.31113 14.3939 3.5963L13.5016 4.49169L12.0879 3.07808L12.9803 2.18576C13.2685 1.89751
+                                        13.7346 1.89751 14.0198 2.18576H14.0229ZM6.93332 8.23578L11.0484 4.11759L12.4621 5.53121L8.34387 9.64633C8.25494 9.73525 8.14455 9.79964 8.02496
+                                        9.83337L6.23111 10.3455L6.7432 8.55162C6.77693 8.43203 6.84133 8.32164 6.93025 8.23271L6.93332 8.23578ZM11.9408 1.14625L5.89074 7.1932C5.62397
+                                        7.45998 5.43078 7.78808 5.32959 8.14685L4.4526 11.2133C4.379 11.4708 4.44953 11.7468 4.63965 11.9369C4.82977 12.127 5.10574 12.1976 5.36332
+                                        12.124L8.42973 11.247C8.79156 11.1427 9.11967 10.9495 9.38338 10.6858L15.4334 4.63888C16.2951 3.77722 16.2951 2.37894 15.4334 1.51728L15.0624
+                                        1.14625C14.2007 0.284585 12.8024 0.284585 11.9408 1.14625ZM3.19844 2.34214C1.70816 2.34214 0.5 3.55031 0.5 5.04058V13.3812C0.5 14.8715 1.70816
+                                        16.0796 3.19844 16.0796H11.5391C13.0293 16.0796 14.2375 14.8715 14.2375 13.3812V9.94683C14.2375 9.539 13.9094 9.21089 13.5016 9.21089C13.0937
+                                        9.21089 12.7656 9.539 12.7656 9.94683V13.3812C12.7656 14.0589 12.2167 14.6078 11.5391 14.6078H3.19844C2.52076 14.6078 1.97188 14.0589 1.97188
+                                        13.3812V5.04058C1.97188 4.36291 2.52076 3.81402 3.19844 3.81402H6.63281C7.04065 3.81402 7.36875 3.48591 7.36875 3.07808C7.36875 2.67025 7.04065
+                                        2.34214 6.63281 2.34214H3.19844Z" fill="black"/>
+                        </svg>
+                        <i class="modifier-link__content--title link">Modifier</i>
+                    </button>
                 </div>
+            </div>
 
-                <div class="modal-container__modal modal-container__modal--upload-modal">
 
-                    <div class="upload-modal__btn-container">
-                        <img src="./assets/icons/back.svg" alt="Icône Retour"
-                             class="upload-modal__btn upload-modal__btn--back link">
-                        <img src="./assets/icons/close.svg" alt="Icône Fermer"
-                             class="upload-modal__btn upload-modal__btn--close link">
+            <aside class="modal-container">
+                <div class="modal-container__overlay"></div>
+
+                <div class="modal-container__modals" id="modal">
+
+                    <div class="modal-container__modal modal-container__modal--delete-modal">
+                        <img src="./assets/icons/close.svg" alt="Icône Fermer" class="delete-modal__btn--close link">
+                        <h2 class="delete-modal__title">Galerie photo</h2>
+                        <div class="delete-modal__gallery"></div>
+                        <hr class="delete-modal__horizontal-bar hbar">
+                        <button class="delete-modal__btn--upload">Ajouter une photo</button>
                     </div>
 
-                    <h1 class="upload-modal__title">Ajout photo</h1>
+                    <div class="modal-container__modal modal-container__modal--upload-modal">
 
-                    <div class="upload-modal__upload-area">
+                        <div class="upload-modal__btn-container">
+                            <img src="./assets/icons/back.svg" alt="Icône Retour"
+                                 class="upload-modal__btn upload-modal__btn--back link">
+                            <img src="./assets/icons/close.svg" alt="Icône Fermer"
+                                 class="upload-modal__btn upload-modal__btn--close link">
+                        </div>
+
+                        <b class="upload-modal__title">Ajout photo</b>
+
+                        <div class="upload-modal__upload-area">
 
 
-                        <div class="upload-modal__upload-elements">
-                            <img id="uploadLogo" src="./assets/icons/picture-logo.svg" alt="Logo de photo"
-                                 class="upload-modal__upload-logo">
-                            <label for="uploadFileInput" class="upload-modal__btn--upload-file btn">+ Ajouter
-                                photo</label>
-                            <input type="file" id="uploadFileInput" class="upload-modal__file-input"/>
-                            <h3 class="upload-modal__file-input__description">Formats de
-                                fichier acceptés: .jpg, .jpeg, .png.<br>
-                                Taille maximale acceptée: 4 Mo</h3>
+                            <div class="upload-modal__upload-elements">
+                                <img id="uploadLogo" src="./assets/icons/picture-logo.svg" alt="Logo de photo"
+                                     class="upload-modal__upload-logo">
+                                <label for="uploadFileInput" class="upload-modal__btn--upload-file btn">+ Ajouter
+                                    photo</label>
+                                <input type="file" id="uploadFileInput" class="upload-modal__file-input">
+                                <h3 class="upload-modal__file-input__description">Formats de
+                                    fichier acceptés: .jpg, .jpeg, .png.<br>
+                                    Taille maximale acceptée: 4 Mo</h3>
+                            </div>
+
+                        </div>
+
+                        <div class="upload-modal__form-container">
+                            <form action="#" method="post" class="upload-modal__form">
+                                <label for="titleInput"
+                                       class="upload-modal__form__label upload-modal__form__label--title">Titre</label>
+                                <input type="text" name="title" id="titleInput"
+                                       class="upload-modal__form__input upload-modal__form__input--title"
+                                       placeholder="La Vénus de Milo - Musée du Louvre" autocomplete="on">
+                                <label for="categoryInput"
+                                       class="upload-modal__form__label upload-modal__form__label--category">Catégorie</label>
+                                <select id="categoryInput" name="category"
+                                        class="upload-modal__form__input upload-modal__form__input--category">
+                                    <option value="" disabled selected hidden
+                                            class="upload-modal__form__category__option--default-text-preview">Objets
+                                    </option>
+                                    <option value="1"
+                                            class="upload-modal__form__category__option upload-modal__form__category__option--1">
+                                        Objets
+                                    </option>
+                                    <option value="2"
+                                            class="upload-modal__form__category__option upload-modal__form__category__option--2">
+                                        Appartements
+                                    </option>
+                                    <option value="3"
+                                            class="upload-modal__form__category__option upload-modal__form__category__option-3">
+                                        Hôtels & restaurants
+                                    </option>
+                                </select>
+                                <hr>
+                                <input type="submit" value="Valider" class="upload-modal__form__btn--submit btn">
+                            </form>
                         </div>
 
                     </div>
 
-                    <div class="upload-modal__form-container">
-                        <form action="#" method="post" class="upload-modal__form">
-                            <label for="title"
-                                   class="upload-modal__form__label upload-modal__form__label--title">Titre</label>
-                            <input type="text" name="title" id="titleInput"
-                                   class="upload-modal__form__input upload-modal__form__input--title"
-                                   placeholder="La Vénus de Milo - Musée du Louvre" autocomplete="on">
-                            <label for="category" class="upload-modal__form__label upload-modal__form__label--category">Catégorie</label>
-                            <select id="categoryInput" name="category"
-                                    class="upload-modal__form__input upload-modal__form__input--category">
-                                <option value="" disabled selected hidden
-                                        class="upload-modal__form__category__option--default-text-preview">Objets
-                                </option>
-                                <option value="1"
-                                        class="upload-modal__form__category__option upload-modal__form__category__option--1">
-                                    Objets
-                                </option>
-                                <option value="2"
-                                        class="upload-modal__form__category__option upload-modal__form__category__option--2">
-                                    Appartements
-                                </option>
-                                <option value="3"
-                                        class="upload-modal__form__category__option upload-modal__form__category__option-3">
-                                    Hôtels & restaurants
-                                </option>
-                            </select>
-                            <hr>
-                            <input type="submit" value="Valider" class="upload-modal__form__btn--submit btn">
-                        </form>
-                    </div>
-
                 </div>
-
-            </div>
-        </aside>
+            </aside>
 
 
-        <!-- Modale de l'administarteur.rice, modification des travaux dans la base de données -->
+            <!-- Modale de l'administarteur.rice, modification des travaux dans la base de données -->
 
-        <!-- Navigation des catégories du portfolio -->
-        <!-- Element : categories -->
-        <nav class="portfolio__categories categories">
+            <!-- Navigation des catégories du portfolio -->
+            <!-- Element : categories -->
+            <nav class="portfolio__categories categories">
 
-            <!-- ###### BOUTONS DE CATÉGORIES AFFICHÉS DYNAMIQUEMENT EN JAVASCRIPT ###### -->
+                <!-- ###### BOUTONS DE CATÉGORIES AFFICHÉS DYNAMIQUEMENT EN JAVASCRIPT ###### -->
 
-        </nav>
+            </nav>
 
-        <!-- Galerie du portfolio -->
-        <!-- Element : gallery -->
-        <article class="portfolio__gallery gallery">
-            <h2 class="hidden-title">Galerie des travaux de Sophie Bluel</h2>
+            <!-- Galerie du portfolio -->
+            <!-- Element : gallery -->
+            <article class="portfolio__gallery gallery">
+                <h2 class="hidden-title">Galerie des travaux de Sophie Bluel</h2>
 
-            <!-- ############## TRAVAUX AFFICHÉS DYNAMIQUEMENT EN JAVASCRIPT ############# -->
+                <!-- ############## TRAVAUX AFFICHÉS DYNAMIQUEMENT EN JAVASCRIPT ############# -->
 
-        </article>
+            </article>
 
-    </section>
+        </section>
 
-    <!-- Section de contact -->
-    <!-- Block : contact -->
-    <section class="contact">
+        <!-- Section de contact -->
+        <!-- Block : contact -->
+        <section class="contact">
 
-        <!-- Titre de la section -->
-        <!-- Element : title -->
-        <h2 class="contact__title">Contact</h2>
+            <!-- Titre de la section -->
+            <!-- Element : title -->
+            <h2 class="contact__title">Contact</h2>
 
-        <!-- Paragraphe d'introduction -->
-        <!-- Element : paragraph -->
-        <p class="contact__paragraph">Vous avez un projet ? Discutons-en !</p>
+            <!-- Paragraphe d'introduction -->
+            <!-- Element : paragraph -->
+            <p class="contact__paragraph">Vous avez un projet ? Discutons-en !</p>
 
-        <!-- Formulaire de contact -->
-        <!-- Element : form -->
-        <form action="#" method="post" class="contact__form">
+            <!-- Formulaire de contact -->
+            <!-- Element : form -->
+            <form action="#" method="post" class="contact__form">
 
-            <!-- Champs du formulaire -->
-            <!-- Labels indiquant l'entrée attendue et champs de formulaire de type "text" pour les identifiants avec un texte
-                par défaut (placeholder) et l'élement autocomplete pour que le navigateur enregistre et suggère les identifants -->
-            <!-- Modifiers : label / input-->
+                <!-- Champs du formulaire -->
+                <!-- Labels indiquant l'entrée attendue et champs de formulaire de type "text" pour les identifiants avec un texte
+                    par défaut (placeholder) et l'élement autocomplete pour que le navigateur enregistre et suggère les identifants -->
+                <!-- Modifiers : label / input-->
 
-            <!-- Nom -->
-            <label for="name" class="contact__form--label form__label">Nom</label>
-            <input type="text" name="name" id="name" class="contact__form--input" autocomplete="on"
-                   placeholder="Votre nom">
+                <!-- Nom -->
+                <label for="name" class="contact__form--label form__label">Nom</label>
+                <input type="text" name="name" id="name" class="contact__form--input" autocomplete="on"
+                       placeholder="Votre nom">
 
-            <!-- E-mail -->
-            <label for="email" class="contact__form--label form__label">Email</label>
-            <input type="email" name="email" id="email" class="contact__form--input" autocomplete="on"
-                   placeholder="Votre e-mail">
+                <!-- E-mail -->
+                <label for="email" class="contact__form--label form__label">Email</label>
+                <input type="email" name="email" id="email" class="contact__form--input" autocomplete="on"
+                       placeholder="Votre e-mail">
 
-            <!-- Mesdeletesage -->
-            <label for="message" class="contact__form--label form__label">Message</label>
-            <textarea name="message" id="message" cols="30" rows="10" class="contact__form--textaera"
-                      placeholder="  Votre message"></textarea>
+                <!-- Mesdeletesage -->
+                <label for="message" class="contact__form--label form__label">Message</label>
+                <textarea name="message" id="message" cols="30" rows="10" class="contact__form--textaera"
+                          placeholder="  Votre message"></textarea>
 
-            <!-- Bouton de soumission du formulaire -->
-            <!-- Modifier : submit -->
-            <input type="submit" value="Envoyer" class="contact__form--submit">
+                <!-- Bouton de soumission du formulaire -->
+                <!-- Modifier : submit -->
+                <input type="submit" value="Envoyer" class="contact__form--submit">
 
-        </form>
+            </form>
 
-    </section>
+        </section>
 
-</main>
+    </main>
 
-<!-- Pied de page -->
-<!-- Block : footer -->
-<footer class="footer">
+        <!-- Pied de page -->
+        <!-- Block : footer -->
+        <footer class="footer">
 
-    <!-- Pied de page -->
-    <!-- Element : nav -->
-    <nav class="footer__nav">
+            <!-- Pied de page -->
+            <!-- Element : nav -->
+            <nav class="footer__nav">
 
-        <!-- Navigation secondaire -->
-        <!-- Element : nav-list -->
-        <ul class="footer__nav-list">
+                <a href="#">
+                    <!-- Navigation secondaire -->
+                    <!-- Element : nav-list -->
+                    <ul class="footer__nav-list">
 
-            <!-- Lien vers les mentions légales -->
-            <!-- Element : nav-item -->
-            <a href="#">
-                <li class="footer__nav-item">Mentions Légales</li>
-            </a>
+                        <!-- Lien vers les mentions légales -->
+                        <!-- Element : nav-item -->
+                        <li class="footer__nav-item">Mentions Légales</li>
 
-        </ul>
+                    </ul>
 
-    </nav>
+                </a>
+            </nav>
 
-</footer>
-</body>
+        </footer>
+    </body>
 
-<!-- Import des fichiers JavaScript -->
-<script type="module" src="assets/scripts/gallery.js "></script>
-<script src="./assets/scripts/auth.js"></script>
-<script src="./assets/scripts/contact.js"></script>
-<script type="module" src="./assets/scripts/modal.js"></script>
+    <!-- Import des fichiers JavaScript après chargement du DOM -->
+    <script type="module" src="assets/scripts/gallery.js"></script>
+    <script type="module" src="./assets/scripts/modal.js"></script>
+    <script src="./assets/scripts/auth.js"></script>
+    <script src="./assets/scripts/contact.js"></script>
+
 </html>
