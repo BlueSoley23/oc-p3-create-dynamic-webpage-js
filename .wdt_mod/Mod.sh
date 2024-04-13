@@ -32,7 +32,17 @@ export -f addFunction
 
 
 initBackend() {
-    cd $Backend & npm init & npm install & npm audit fix
+    cd '/home/blue23/Desktop/oc-p3-create-dynamic-webpage-js/Backend/'
+    npm init -y
+    npm install
+    npm audit fix
+    cd "/home/blue23/Desktop/oc-p3-create-dynamic-webpage-js/.wdt_mod/"
+    echo
+    echo
+    echo
+    echo
+    echo
+    echo "              ... Press return for go back to menu > "
     }
     
 export -f initBackend
@@ -41,8 +51,9 @@ export -f initBackend
 
 
 serverStart() {
-     cd ~/Desktop/oc-p3-create-dynamic-webpage-js/Backend/ && npm start
-     & live-server ~/Desktop/oc-p3-create-dynamic-webpage-js/
+     cd ~/Desktop/oc-p3-create-dynamic-webpage-js/Backend/ 
+     npm start
+     live-server ~/Desktop/oc-p3-create-dynamic-webpage-js/
     }
     
 export -f serverStart
