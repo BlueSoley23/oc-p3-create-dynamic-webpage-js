@@ -51,6 +51,8 @@ export const uploadTitleField = document.querySelector('.upload-modal__form__inp
 export const uploadCategoryField = document.querySelector('.upload-modal__form__input--category');
 // Sélection du bouton de validation du formulaire de chargement de travaux
 export const uploadSubmitBtn = document.querySelector('.upload-modal__form__btn--submit');
+// Selection de la zone bleue entourant le bouton et logo d'upload/l'image uploadée
+export const uploadArea = document.querySelector('.upload-modal__upload-area');
 // Sélection de la zone d'upload d'image
 export const uploadImg = document.querySelector('.upload-img');
 
@@ -149,12 +151,13 @@ export function loadUploadModal() {
             const img = document.createElement('img');
             img.src = e.target.result;
             img.classList.add('upload-img');
-            document.querySelector('.upload-modal__upload-area').innerHTML = '';
-            document.querySelector('.upload-modal__upload-area').style.display = 'flex';
-            document.querySelector('.upload-modal__upload-area').style.justifyContent = 'center';
-            document.querySelector('.upload-modal__upload-area').style.alignItems = 'center';
-            document.querySelector('.upload-modal__upload-area').style.backgroundColor = '#E8F1F6';
-            document.querySelector('.upload-modal__upload-area').appendChild(img);
+            uploadArea.innerHTML = '';
+            uploadArea.style.display = 'flex';
+            uploadArea.style.justifyContent = 'center';
+            uploadArea.style.alignItems = 'center';
+            uploadArea.style.backgroundColor = '#E8F1F6';
+            uploadArea.appendChild(img);
+            uploadArea.classList.add('fileAdded');
             img.addEventListener('click', function () {
                 uploadInput.click();
             });

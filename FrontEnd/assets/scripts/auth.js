@@ -70,6 +70,13 @@ logoutButton.addEventListener('click', function(event) {
     // On recharge la page
     location.reload();
 
-    // On prévient l'utilisateur que la déconnexion a bien eu lieu
+   // On prévient l'utilisateur que la déconnexion a bien eu lieu
     alert('Vous avez été déconnecté !');
 });
+
+
+
+
+
+
+

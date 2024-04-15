@@ -132,10 +132,6 @@ async function printCategories() {
         // Ajout de la classe 'category-button' au bouton
         buttonElement.innerHTML = `${category}`;
 
-        // Si la catégorie est 'Tous', on ajoute la classe 'tous-button' au bouton
-        if (category === 'Tous') {
-            buttonElement.classList.add('tous-button'); // Ajoute la classe 'tous-button' au bouton 'Tous'
-        }
 
         // On intègre les boutons dans la section .categories
         categoriesSection.appendChild(buttonElement);

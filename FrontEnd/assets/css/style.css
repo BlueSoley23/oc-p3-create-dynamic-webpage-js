@@ -881,12 +881,24 @@ li:hover {
 	background-color: #E8F1F6;
 }
 
+.upload-modal__upload-elements {
+	height: 193px;
+}
+
 .upload-modal__upload-elements * {
 	background-color: #E8F1F6;
 }
 
 .upload-modal__upload-area {
 	margin: 4em 0;
+}
+
+.fileAdded {
+	margin: 4.5em;
+}
+
+#uploadFileInput {
+	display: none;
 }
 
 .upload-modal__btn-container {
