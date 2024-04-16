@@ -1,5 +1,18 @@
 Project=~/Desktop/oc-p3-create-dynamic-webpage-js/
 Backend=~/Desktop/oc-p3-create-dynamic-webpage-js/Backend
+goBackMenu() {
+    cd "/home/blue23/Desktop/ocp3_js-pf/.wdt_mod/"
+    echo
+    echo
+    echo
+    echo
+    echo
+    echo "              ... Press return for go back to menu > "
+    read n-1 -s gobackmenu
+    sleep 55
+    return
+}
+    
 
 addFunction () {
     # Lire la nouvelle option et la commande de l'utilisateur
@@ -32,28 +45,28 @@ export -f addFunction
 
 
 initBackend() {
-    cd '/home/blue23/Desktop/oc-p3-create-dynamic-webpage-js/Backend/'
+    cd '/home/blue23/Desktop/ocp3_js-pf/Backend'
     npm init -y
     npm install
     npm audit fix
-    cd "/home/blue23/Desktop/oc-p3-create-dynamic-webpage-js/.wdt_mod/"
-    echo
-    echo
-    echo
-    echo
-    echo
-    echo "              ... Press return for go back to menu > "
-    }
+    goBackMenu()
+}
     
 export -f initBackend
 
 
 
-
+backServerStart() 
+frntServerStart
 serverStart() {
-     cd ~/Desktop/oc-p3-create-dynamic-webpage-js/Backend/ 
-     npm start
-     live-server ~/Desktop/oc-p3-create-dynamic-webpage-js/
+     cd /home/blue23/Desktop/ocp3_js-pf/Backend/ ;
+         xterm -e "
+     npm start ;" &
+         xterm -e "
+     live-server ~/Desktop/oc-p3-create-dynamic-webpage-js/ ;"
+     
+     cd "/home/blue23/Desktop/ocp3_js-pf/.wdt_mod/"
+
     }
     
 export -f serverStart
@@ -76,7 +89,7 @@ gitCommitAndPush() {
             token=$GITHUB_TOKEN
 
             # Positionnement dans le répertoire de travail
-            cd "/home/blue23/Desktop/oc-p3-create-dynamic-webpage-js/"
+            cd "/home/blue23/Desktop/ocp3_js-pf/"
 
             # Ajoute tous les fichiers du répertoire courant à git
             git add .
@@ -99,7 +112,7 @@ gitCommitAndPush() {
             else
               echo "Une erreur s\'est produite lors du push."
             fi
-            cd "/home/blue23/Desktop/oc-p3-create-dynamic-webpage-js/.wdt_mod/"
+            cd "/home/blue23/Desktop/ocp3_js-pf/.wdt_mod/"
 
 }
 
@@ -111,7 +124,7 @@ export -f gitCommitAndPush
 reClone() {
     rm -rf $Project
     cd ~/Desktop
-    git clone https://github.com/BlueSoley23/oc-p3-create-dynamic-webpage-js.git
+    git clone https://github.com/BlueSoley23/oc-p3-create-dynamic-webpage-js.git ocp3_js-pf
 }
 
 export -f reClone
@@ -121,16 +134,16 @@ export -f reClone
 
 dbReset() {
     # Supprimez le dossier images
-    rm -rf ~/Desktop/oc-p3-create-dynamic-webpage-js/Backend/images
+    rm -rf /home/blue23/Desktop/ocp3_js-pf/Backend/images
         
     # Copiez le dossier images de sauvegarde
-    cp -r ~/Desktop/p3BackUp/images $Backend
+    cp -r /home/blue23/Desktop/p3BackUp/images $Backend
             
     # Supprimez le fichier database.sqlite
-    rm -rf ~/Desktop/oc-p3-create-dynamic-webpage-js/Backend/database.sqlite
+    rm -rf /home/blue23/Desktop/ocp3_js-pf/Backend/database.sqlite
             
     # Copiez le fichier database.sqlite de sauvegarde
-    cp ~/Desktop/p3BackUp/database.sqlite $Backend
+    cp /home/blue23/Desktop/p3BackUp/database.sqlite $Backend
 }
 
 export -f dbReset
