@@ -5,7 +5,7 @@ Ce projet est un site portfolio pour une architecte d'intérieur. Il a été dé
 pour l'organisation et la stylisation des éléments de la page, l'harmonie d'unités CSS relatives (les em), et
 l'utilisation d'un design system.
 
-## Fonctionnalités
+## Fonc²²tionnalités
 
 1. **Page de présentation des travaux de l'architecte** : Cette page affiche les différents projets réalisés par
    l'architecte. Les projets sont filtrés et affichés dans une galerie.
@@ -26,7 +26,7 @@ Les données sont récupérées via des appels à l'API. Les données récupér�
 projets dans la galerie. Lorsqu'un utilisateur est connecté, des appels supplémentaires à l'API sont effectués pour
 récupérer les données de l'utilisateur.
 
-## Gestion de la connexion de l'utilisateur
+## Gestion de la connexion de l'utilisateur"
 
 La connexion de l'utilisateur est gérée via JavaScript. Une fois qu'un utilisateur est connecté, il a accès à des
 fonctionnalités supplémentaires. La différence entre un utilisateur connecté et non connecté est gérée via JavaScript.

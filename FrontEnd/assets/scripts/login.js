@@ -3,6 +3,8 @@
 // ####################   Gère la soumission du formulaire de connexion   #################################
 // #######################################################################################################
 
+import { printErrorAlert } from './errorAlert.js';
+
 // Sélectionne le formulaire de connexion dans login.html
 const loginForm = document.querySelector('.login__form');
 
@@ -54,7 +56,8 @@ loginForm.addEventListener('submit', async function(event) {
         }
 
         else if (!response.ok) {
-            throw new Error(`Une erreur est survenue ! Voici quelques conseils pour tenter de résoudre le problème : \n\ - Vérifier votre connexion internet. \n - Recharger la page (F5 / Cmd + R).\n - Videz le cache de votre navigateur (Ctrl+Shift+Del).\n - Redémarrez votre navigateur ou essayez-en un autre.\n - Redémarrez votre ordinateur.\n - Réessayez plus tard.\n - Essayez avec un autre appareil.\n\n\n Sinon, contacter votre administrateur système ou webmaster et lui transmettre ce message d'erreur : \n\n` + `Informations : ` + error + `\n` + `Type d'erreur : ` + error.name +  `\n` + `Statut de la réponse : ` + response.status + `\n` + `URL actuelle : ` + window.location.href + `\n` + `Détails de l'erreur : ` + error.message);        }
+            throw new Error(`Problème de serveur' : ${response.status}`);
+        }
 
         // Stockage du token de connexion dans le localStorage
         localStorage.setItem('token', responseData.token);
@@ -66,6 +69,9 @@ loginForm.addEventListener('submit', async function(event) {
     // Si une erreur est attrapée, une erreur imprévue (erreur 404 de page introvable, erreur 500 de serveur, etc.),
     // on affiche un message d'erreur avec les informations définies dans le bloc try
     catch (error) {
-        alert(error);
+
+        // Appel de la fonction printErrorAlert() pour afficher un message d'erreur
+        printErrorAlert(error, response)
+
     }
 });
