@@ -4,6 +4,8 @@
 // #######################################################################################################
 // #######################################################################################################
 
+import { printErrorAlert } from './errorAlert.mjs';
+
     // Récupération de l'élément du DOM qui contiendra les travaux
     const gallery = document.querySelector('.gallery');
 
@@ -29,7 +31,7 @@
 
         // Si la réponse n'est pas reçue, on affiche une boîte de dialogue avec le message d'erreur
             .catch(error => {
-            alert('Veuillez contacter votre administrateur système en lui indiquant ce message d\'erreur :\n\n' + error);
+            printErrorAlert(error, response);
 
         });
     }
@@ -68,7 +70,7 @@ async function printWorks(works) {
     catch (error) {
 
         // Si une erreur est survenue, on affiche une boîte de dialogue avec le message d'erreur
-        alert('Veuillez contacter votre administrateur système en lui indiquant ce message d\'erreur :\n\n' + error);
+        printErrorAlert(error, response);
     }
 }
 
@@ -105,7 +107,7 @@ async function getCategories() {
     catch (error) {
 
         // Si une erreur est survenue, on affiche une boîte de dialogue avec le message d'erreur
-        alert('Veuillez contacter votre administrateur système en lui indiquant ce message d\'erreur :\n\n' + error);
+        printErrorAlert(error, response);
     }
 }
 

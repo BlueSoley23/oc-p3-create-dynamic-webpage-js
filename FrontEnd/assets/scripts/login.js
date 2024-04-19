@@ -3,7 +3,7 @@
 // ####################   Gère la soumission du formulaire de connexion   #################################
 // #######################################################################################################
 
-import { printErrorAlert } from './errorAlert.js';
+import { printErrorAlert } from './errorAlert.mjs';
 
 // Sélectionne le formulaire de connexion dans login.html
 const loginForm = document.querySelector('.login__form');
@@ -71,7 +71,7 @@ loginForm.addEventListener('submit', async function(event) {
     catch (error) {
 
         // Appel de la fonction printErrorAlert() pour afficher un message d'erreur
-        printErrorAlert(error, response)
+        printErrorAlert(error, response);
 
     }
 });

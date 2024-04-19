@@ -5,7 +5,7 @@ Ce projet est un site portfolio pour une architecte d'intérieur. Il a été dé
 pour l'organisation et la stylisation des éléments de la page, l'harmonie d'unités CSS relatives (les em), et
 l'utilisation d'un design system.
 
-## Fonc²²tionnalités
+## Fonctionnalités
 
 1. **Page de présentation des travaux de l'architecte** : Cette page affiche les différents projets réalisés par
    l'architecte. Les projets sont filtrés et affichés dans une galerie.

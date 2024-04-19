@@ -1,5 +1,5 @@
 export function printErrorAlert (error, response) {
-    alert("##############   " + error + "   #############\n\nUne erreur est survenue ! Voici quelques conseils pour tenter de résoudre le problème : \n\
+    alert("########   " + error + "   #######\n\nUne erreur est survenue ! Voici quelques conseils pour tenter de résoudre le problème : \n\
     - Vérifier  la combinaison email/mot de passe saisie.\n\
     - Vérifier votre connexion internet. \n\
     - Recharger la page (F5 / Cmd + R).\n\

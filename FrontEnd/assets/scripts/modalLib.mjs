@@ -6,6 +6,9 @@
 ###############################################################################################################
 */
 
+import { printErrorAlert } from './errorAlert.mjs';
+
+
 // CONSTANTES DE SÉECTIONS DES ÉLÉMENTS DU DOM UTILISÉS DANS LE MODULE
 
 // SÉLÉCTION DES ÉLÉMENTS DU DOM ESSENTIELS ET GÉNÉRAUX (OVERLAY, CONTENAIRES, ETC...)
@@ -134,16 +137,17 @@ async function loadDeleteGallery() {
                         // Recharger la galerie après la suppression
                         await loadDeleteGallery();
                     } else {
-                        alert('Erreur lors de la suppression du travail ! Veuillez réessayer plus tard et signaler à votre administrateur le message d\'erreur suivant : ' + error );                        }
+                        alert(('Erreur ' + '( ' + error + ' ) ' + ' lors de la suppression du travail ' + item.title + ' !'));
+                    }
                 } catch (error) {
-                    alert('Erreur lors de la suppression du travail ! Veuillez réessayer plus tard et signaler à votre administrateur le message d\'erreur suivant : \n\n\n' + error );
+                    printErrorAlert(error, response);
                 }
             }
         });
     }
 }
 
-// Fonction de chargement de la modale de chargement
+// Fonction de chargement du travvail (fichier image) dans la modale de chargement
 export function loadUploadModal() {
     document.getElementById('uploadFileInput').addEventListener('change', function (e) {
         const reader = new FileReader();
@@ -239,6 +243,7 @@ uploadSubmitBtn.addEventListener('click', async (event) => {
         // Si la requête est réussie, alerte l'utilisateur que le travail a été ajouté
         if (response.ok) {
             alert('Le travail a été correctement ajouté !');
+            uploadTitleField.value = '';
             window.location.reload();
         }
         // Si la requête n'est pas réussie, lance une erreur
@@ -248,6 +253,8 @@ uploadSubmitBtn.addEventListener('click', async (event) => {
     }
     // Attrape toutes les erreurs et alerte l'utilisateur
     catch (error) {
-        alert(error);
+{
+        printErrorAlert(error, { status: 'No response' });
     }
+}
 });
