@@ -147,46 +147,66 @@ async function loadDeleteGallery() {
     }
 }
 
-// Fonction de chargement du travvail (fichier image) dans la modale de chargement
+/* Fonction chargée de récupérer et ajouter au DOM l'image du travail dés qu'une action est détéctée avec la boite de dialogue du formulaire,
+chargée de récupérer un fichier sur l'ordinateur client (la sélection d'un travail par le clique sur le bouton d'upload)
+Finalement, c'est elle qui gère la prévisualisation du travail à chrger, le chargement d'une image au clic sur le bouton ou suyr une image déja chargée
+ainsi que le chargement du formulmaire au clic sur le bouton de validation */
+
+
+// Déclaration de la fonction loadUploadModal
 export function loadUploadModal() {
+    // Ajout d'un écouteur d'événements sur l'élément d'entrée de fichier avec l'ID 'uploadFileInput'
+    // Cet écouteur se déclenche lorsque l'utilisateur sélectionne un fichier
     document.getElementById('uploadFileInput').addEventListener('change', function (e) {
+        // Création d'un nouvel objet FileReader pour lire le contenu du fichier sélectionné
         const reader = new FileReader();
+        // Ajout d'un écouteur d'événements qui se déclenche lorsque le fichier est entièrement lu
         reader.onload = function(e) {
+            // Création d'un nouvel élément image
             const img = document.createElement('img');
+            // Définition de la source de l'image comme étant le contenu du fichier lu
             img.src = e.target.result;
+            // Ajout de la classe 'upload-img' à l'image
             img.classList.add('upload-img');
+            // Effacement du contenu de l'élément 'uploadArea'
             uploadArea.innerHTML = '';
+            // Modification du style de l'élément 'uploadArea' pour afficher l'image
             uploadArea.style.display = 'flex';
             uploadArea.style.justifyContent = 'center';
             uploadArea.style.alignItems = 'center';
             uploadArea.style.backgroundColor = '#E8F1F6';
+            // Ajout de l'image à l'élément 'uploadArea'
             uploadArea.appendChild(img);
+            // Ajout de la classe 'fileAdded' à l'élément 'uploadArea'
             uploadArea.classList.add('fileAdded');
+            // Ajout d'un écouteur d'événements sur l'image qui se déclenche lorsque l'utilisateur clique dessus
+            // Cela permet à l'utilisateur de sélectionner un nouveau fichier
             img.addEventListener('click', function () {
                 uploadInput.click();
             });
 
+            // Ajout d'un écouteur d'événements sur le formulaire avec la classe 'upload-modal__form'
+            // Cet écouteur se déclenche lorsque l'utilisateur soumet le formulaire
             document.querySelector('.upload-modal__form').addEventListener('submit', function (e) {
+                // Prévention de la soumission par défaut du formulaire
                 e.preventDefault();
+                // Récupération du fichier sélectionné, du titre et de la catégorie du formulaire
                 const file = document.uploadInput.files[0];
                 const title = document.getElementById('titleInput').value;
                 const category = document.getElementById('categoryInput').value;
+                // Soumission du formulaire
                 this.submit();
             });
         };
+        // Lecture du fichier sélectionné
         reader.readAsDataURL(e.target.files[0]);
     });
 }
 
-// Écouteur d'événements pour le changement de l'élément d'entrée de fichier
+// Écouteur d'événements pour que le nom du travail soit le nom du fichier par défaut dans le champ titre du formulaire
 uploadInput.addEventListener('change', () => {
     uploadTitleField.value = uploadInput.files[0].name;
 });
-
-// #######################################################################################################
-// ########################################   uploadSubmitBtn   ##########################################
-// ####################   Soumet le formulaire pour télécharger un nouveau travail   ######################
-// #######################################################################################################
 
 // Change la couleur du texte en fonction de la catégorie sélectionnée
 // Écouteur d'événements pour les changements sur l'élément de sélection de catégorie
