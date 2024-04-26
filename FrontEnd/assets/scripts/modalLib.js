@@ -157,9 +157,9 @@ ainsi que le chargement du formulmaire au clic sur le bouton de validation, donc
 
 
 // Déclaration de la fonction loadUploadModal
+
 export function loadUploadModal() {
     // Ajout d'un écouteur d'événements sur l'élément d'entrée de fichier avec l'ID 'uploadFileInput'
-    // Cet écouteur se déclenche lorsque l'utilisateur sélectionne un fichier
     document.getElementById('uploadFileInput').addEventListener('change', function (e) {
         // Création d'un nouvel objet FileReader pour lire le contenu du fichier sélectionné
         const reader = new FileReader();
@@ -187,7 +187,6 @@ export function loadUploadModal() {
             img.addEventListener('click', function () {
                 uploadInput.click();
             });
-
             // Ajout d'un écouteur d'événements sur le formulaire avec la classe 'upload-modal__form'
             // Cet écouteur se déclenche lorsque l'utilisateur soumet le formulaire
             document.querySelector('.upload-modal__form').addEventListener('submit', function (e) {
@@ -202,83 +201,22 @@ export function loadUploadModal() {
         // Prévisualisation de l'image à la place de l'icone d'upload
         reader.readAsDataURL(e.target.files[0]);
     });
-
-    // Écouteur d'événements pour que le nom du travail soit le nom du fichier par défaut dans le champ titre du formulaire
-    uploadInput.addEventListener('change', () => {
-        uploadTitleField.value = uploadInput.files[0].name;
+    // Ajout d'un écouteur d'événements sur le formulaire avec la classe 'upload-modal__form'
+    // Cet écouteur se déclenche lorsque l'utilisateur soumet le formulaire
+    document.querySelector('.upload-modal__form').addEventListener('submit', function (e) {
+        // Prévention de la soumission par défaut du formulaire
+        e.preventDefault();
+        // Récupération du fichier sélectionné, du titre et de la catégorie du formulaire
+        const file = document.uploadInput.files[0];
+        const title = document.getElementById('titleInput').value;
+        const category = document.getElementById('categoryInput').value;
     });
 
-    // Change la couleur du texte en fonction de la catégorie sélectionnée
-    // Écouteur d'événements pour les changements sur l'élément de sélection de catégorie
-    uploadCategoryField.addEventListener('change', function () {
-        // Si une catégorie est sélectionnée, change la couleur du texte en noir
-        if (this.value) {
-            this.style.color = 'black';
-        }
-        // Si aucune catégorie n'est sélectionnée, change la couleur du texte en #757575
-        else {
-            this.style.color = '#757575';
-        }
-    });
+    // Prévisualisation de l'image à la place de l'icone d'upload
+    reader.readAsDataURL(e.target.files[0]);
+});
 
-    // Écouteur d'événements pour l'événement de clic sur le bouton de soumission du formulaire
-    uploadSubmitBtn.addEventListener('click', async (event) => {
-        // Empêche la soumission de formulaire par défaut
-        event.preventDefault();
-
-        // Obtient le fichier sélectionné, le titre et la catégorie du formulaire
-        const file = uploadInput.files[0];
-        const title = uploadTitleField.value;
-        const category = uploadCategoryField.value;
-
-        // Crée un nouvel objet FormData et ajoute le fichier, le titre et la catégorie
-        const formData = new FormData();
-        formData.append('image', uploadInput.files[0]);
-        formData.append('title', uploadTitleField.value);
-        formData.append('category', uploadCategoryField.value);
-
-        try {
-            // Lance une erreur si aucun fichier n'est sélectionné
-            if (!file) {
-                throw new Error('Veuillez sélectionner un fichier à charger !');
-            }
-            // Lance une erreur si aucun titre n'est fourni
-            if (!title) {
-                throw new Error('Veuillez renseigner un titre pour le travail !');
-            }
-            // Lance une erreur si aucune catégorie n'est sélectionnée
-            if (!category) {
-                throw new Error('Veuillez sélectionner une catégorie pour le travail !');
-            }
-
-            // Envoie une requête POST à l'API pour télécharger le nouveau travail
-            const response = await fetch('http://localhost:5678/api/works', {
-                method: 'POST',
-                headers: {
-                    'Authorization': 'Bearer ' + token
-                },
-                body: formData
-            });
-
-            // Si la requête est réussie, alerte l'utilisateur que le travail a été ajouté
-            if (response.ok) {
-                alert('Le travail a été correctement ajouté !');
-                uploadTitleField.value = '';
-                window.location.reload();
-            }
-            // Si la requête n'est pas réussie, lance une erreur
-            else {
-                throw new Error (error + " : " + error.message);
-            }
-        }
-        // Attrape toutes les erreurs et alerte l'utilisateur
-        catch (error) {
-    {
-            printErrorAlert(error, { status: 'No response' });
-        }
-    }
-    });
-
-    // Écouteur d'événements pour vider le champ Titre
-    uploadTitleField.value = '';
-}
+// Écouteur d'événements pour que le nom du travail soit le nom du fichier par défaut dans le champ titre du formulaire
+uploadInput.addEventListener('change', () => {
+    uploadTitleField.value = uploadInput.files[0].name;
+});
