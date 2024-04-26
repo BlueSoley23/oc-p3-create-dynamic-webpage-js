@@ -42,3 +42,6 @@ openUploaModalBtn.addEventListener('click', () => {
     modalContainer.style.display = 'block';
     deleteModal.style.display = 'none';
 });
+
+
+
