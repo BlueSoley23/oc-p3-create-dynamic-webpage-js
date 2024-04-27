@@ -158,53 +158,56 @@ ainsi que le chargement du formulmaire au clic sur le bouton de validation, donc
 
 // Déclaration de la fonction loadUploadModal
 export function loadUploadModal() {
+    event.preventDefault();
+    // Création d'un nouvel objet FileReader pour lire le contenu du fichier sélectionné
+    const reader = new FileReader();
     // Ajout d'un écouteur d'événements sur l'élément d'entrée de fichier avec l'ID 'uploadFileInput'
     // Cet écouteur se déclenche lorsque l'utilisateur sélectionne un fichier
     document.getElementById('uploadFileInput').addEventListener('change', function (e) {
-        // Création d'un nouvel objet FileReader pour lire le contenu du fichier sélectionné
-        const reader = new FileReader();
-        // Ajout d'un écouteur d'événements qui se déclenche lorsque le fichier est entièrement lu
-        reader.onload = function(e) {
-            // Création d'un nouvel élément image
-            const img = document.createElement('img');
-            // Définition de la source de l'image comme étant le contenu du fichier lu
-            img.src = e.target.result;
-            // Ajout de la classe 'upload-img' à l'image
-            img.classList.add('upload-img');
-            // Effacement du contenu de l'élément 'uploadArea'
-            uploadArea.innerHTML = '';
-            // Modification du style de l'élément 'uploadArea' pour afficher l'image
-            uploadArea.style.display = 'flex';
-            uploadArea.style.justifyContent = 'center';
-            uploadArea.style.alignItems = 'center';
-            uploadArea.style.backgroundColor = '#E8F1F6';
-            // Ajout de l'image à l'élément 'uploadArea'
-            uploadArea.appendChild(img);
-            // Ajout de la classe 'fileAdded' à l'élément 'uploadArea'
-            uploadArea.classList.add('fileAdded');
-            // Ajout d'un écouteur d'événements sur l'image qui se déclenche lorsque l'utilisateur clique dessus
-            // Cela permet à l'utilisateur de sélectionner un nouveau fichier
-            img.addEventListener('click', function () {
-                uploadInput.click();
-            });
+        e.preventDefault();
 
-            // Ajout d'un écouteur d'événements sur le formulaire avec la classe 'upload-modal__form'
-            // Cet écouteur se déclenche lorsque l'utilisateur soumet le formulaire
-            document.querySelector('.upload-modal__form').addEventListener('submit', function (e) {
-                // Prévention de la soumission par défaut du formulaire
+
+        function waitIsFileRead () {
+            // Ajout d'un écouteur d'événements qui se déclenche lorsque le fichier est entièrement lu
+            reader.onload = function(e) {
                 e.preventDefault();
-                // Récupération du fichier sélectionné, du titre et de la catégorie du formulaire
-                const file = document.uploadInput.files[0];
-                const title = document.getElementById('titleInput').value;
-                const category = document.getElementById('categoryInput').value;
-            });
-        };
+
+                // Création d'un nouvel élément image
+                const img = document.createElement('img');
+                // Définition de la source de l'image comme étant le contenu du fichier lu
+                img.src = e.target.result;
+                // Ajout de la classe 'upload-img' à l'image
+                img.classList.add('upload-img');
+                // Effacement du contenu de l'élément 'uploadArea'
+                uploadArea.innerHTML = '';
+                // Modification du style de l'élément 'uploadArea' pour afficher l'image
+                uploadArea.style.display = 'flex';
+                uploadArea.style.justifyContent = 'center';
+                uploadArea.style.alignItems = 'center';
+                uploadArea.style.backgroundColor = '#E8F1F6';
+                // Ajout de l'image à l'élément 'uploadArea'
+                uploadArea.appendChild(img);
+                // Ajout de la classe 'fileAdded' à l'élément 'uploadArea'
+                uploadArea.classList.add('fileAdded');
+                // Ajout d'un écouteur d'événements sur l'image qui se déclenche lorsque l'utilisateur clique dessus
+                // Cela permet à l'utilisateur de sélectionner un nouveau fichier
+                img.addEventListener('click', function () {
+                    e.preventDefault();
+                    uploadInput.click();
+                });
+
+            };
+        }
+        waitIsFileRead();
         // Prévisualisation de l'image à la place de l'icone d'upload
         reader.readAsDataURL(e.target.files[0]);
+
     });
 
     // Écouteur d'événements pour que le nom du travail soit le nom du fichier par défaut dans le champ titre du formulaire
-    uploadInput.addEventListener('change', () => {
+    uploadInput.addEventListener('change', (e) => {
+        e.preventDefault();
+
         uploadTitleField.value = uploadInput.files[0].name;
     });
 
@@ -221,9 +224,7 @@ export function loadUploadModal() {
         }
     });
 
-    // Écouteur d'événements pour l'événement de clic sur le bouton de soumission du formulaire
     uploadSubmitBtn.addEventListener('click', async (event) => {
-        // Empêche la soumission de formulaire par défaut
         event.preventDefault();
 
         // Obtient le fichier sélectionné, le titre et la catégorie du formulaire
@@ -236,6 +237,7 @@ export function loadUploadModal() {
         formData.append('image', uploadInput.files[0]);
         formData.append('title', uploadTitleField.value);
         formData.append('category', uploadCategoryField.value);
+
 
         try {
             // Lance une erreur si aucun fichier n'est sélectionné
@@ -251,6 +253,8 @@ export function loadUploadModal() {
                 throw new Error('Veuillez sélectionner une catégorie pour le travail !');
             }
 
+
+
             // Envoie une requête POST à l'API pour télécharger le nouveau travail
             const response = await fetch('http://localhost:5678/api/works', {
                 method: 'POST',
@@ -260,25 +264,34 @@ export function loadUploadModal() {
                 body: formData
             });
 
-            // Si la requête est réussie, alerte l'utilisateur que le travail a été ajouté
+
+
+            // Si la requête est réussie, met à jour l'état de la modale et affiche un message de confirmation
             if (response.ok) {
+
                 alert('Le travail a été correctement ajouté !');
                 uploadTitleField.value = '';
-                window.location.reload();
+                uploadCategoryField.value ='';
+                uploadInput.files[0].value='';
             }
-            // Si la requête n'est pas réussie, lance une erreur
+            // Si la requête n'est pas réussie, affiche un message d'erreur
             else {
                 throw new Error (error + " : " + error.message);
             }
         }
-        // Attrape toutes les erreurs et alerte l'utilisateur
+        // Attrape toutes les erreurs et affiche un message d'erreur
         catch (error) {
-    {
+
             printErrorAlert(error, { status: 'No response' });
         }
-    }
     });
 
     // Écouteur d'événements pour vider le champ Titre
     uploadTitleField.value = '';
+
+    // Écouteur d'événements pour que le nom du travail soit le nom du fichier par défaut dans le champ titre du formulaire
+    uploadInput.addEventListener('change', () => {
+        uploadTitleField.value = uploadInput.files[0].name;
+    });
+
 }
